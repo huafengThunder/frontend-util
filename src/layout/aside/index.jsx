@@ -15,7 +15,7 @@ function Sider() {
           </ul>
         </li>
         <li>
-          <p className={styles.active}>手册</p>
+          <p>手册</p>
           <ul>
             <li onClick={(e) => nemuClick(e, 'VueJs')}>vue生态</li>
             <li onClick={(e) => nemuClick(e, 'ReactJs')}>react生态</li>
