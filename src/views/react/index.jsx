@@ -2,6 +2,7 @@ import React from 'react'
 import Card from '../../components/card'
 import reactLogo from './imgs/react-logo.svg'
 import reactRouterLogo from './imgs/react-router-logo.png'
+import reduxLogo from './imgs/redux-logo.svg'
 export default function ReactJs() {
   const data = {
     menu: '构建工具',
@@ -17,6 +18,18 @@ export default function ReactJs() {
         href: 'https://reactrouter.com/en/main',
         title: 'React Router',
         describe: 'React官方路由',
+      },
+      {
+        logo: reduxLogo,
+        href: 'https://cn.redux.js.org/',
+        title: 'Redux',
+        describe: 'JS应用的状态容器，提供可预测的状态管理',
+      },
+      {
+        logo: reduxLogo,
+        href: 'https://react-redux.js.org/',
+        title: 'React Redux',
+        describe: 'Official React bindings for Redux',
       },
       {
         logo: reactLogo,
