@@ -5,7 +5,7 @@ import reactRouterLogo from './imgs/react-router-logo.png'
 import reduxLogo from './imgs/redux-logo.svg'
 export default function ReactJs() {
   const data = {
-    menu: '构建工具',
+    menu: 'react生态',
     card: [
       {
         logo: reactLogo,
