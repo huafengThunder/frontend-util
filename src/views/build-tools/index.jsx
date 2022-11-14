@@ -5,7 +5,7 @@ import webpackLogo from './imgs/webpack-logo.png'
 import rollupLogo from './imgs/rollup.jpg'
 function Translate() {
   const data = {
-    menu: '构建工具',
+    menu: 'bundle/cli',
     card: [
       {
         logo: viteLogo,
