@@ -11,6 +11,7 @@ function VueJs() {
         <a
           href="https://v3.cn.vuejs.org/guide/introduction.html"
           target="_blank"
+          className={styles.link}
         >
           <div className={styles.card}>
             <img width="32px" height="32px" src={vueLogo} alt="加载失败" />
@@ -20,7 +21,11 @@ function VueJs() {
             </div>
           </div>
         </a>
-        <a href="https://router.vuejs.org/zh/" target="_blank">
+        <a
+          href="https://router.vuejs.org/zh/"
+          target="_blank"
+          className={styles.link}
+        >
           <div className={styles.card}>
             <img width="32px" height="32px" src={vueLogo} alt="加载失败" />
             <div>
@@ -29,7 +34,11 @@ function VueJs() {
             </div>
           </div>
         </a>
-        <a href="https://vuex.vuejs.org/zh/guide/" target="_blank">
+        <a
+          href="https://vuex.vuejs.org/zh/guide/"
+          target="_blank"
+          className={styles.link}
+        >
           <div className={styles.card}>
             <img width="32px" height="32px" src={vueLogo} alt="加载失败" />
             <div>
@@ -40,7 +49,11 @@ function VueJs() {
             </div>
           </div>
         </a>
-        <a href="https://pinia.vuejs.org/zh/" target="_blank">
+        <a
+          href="https://pinia.vuejs.org/zh/"
+          target="_blank"
+          className={styles.link}
+        >
           <div className={styles.card}>
             <img width="32px" height="32px" src={piniaLogo} alt="加载失败" />
             <div>
@@ -49,7 +62,11 @@ function VueJs() {
             </div>
           </div>
         </a>
-        <a href="https://cli.vuejs.org/zh/guide/" target="_blank">
+        <a
+          href="https://cli.vuejs.org/zh/guide/"
+          target="_blank"
+          className={styles.link}
+        >
           <div className={styles.card}>
             <img width="32px" height="32px" src={vueLogo} alt="加载失败" />
             <div>

@@ -7,22 +7,27 @@
 .content {
   display: flex;
 }
+.link {
+  flex: 1;
+  margin-right: 10px;
+  background-color: #fff;
+}
+.link:last-child {
+  margin-right: 0;
+}
+.link:hover {
+  box-shadow: 0 6px 16px 0 #d6e0e8;
+}
 .card {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 260px;
   height: 88px;
-  margin: 0 24px 24px 0;
   vertical-align: top;
-  background-color: #fff;
   img {
     margin-left: 10px;
     margin-right: 10px;
   }
-}
-.card:hover {
-  box-shadow: 0 6px 16px 0 #d6e0e8;
 }
 .title {
   font-size: 14px;

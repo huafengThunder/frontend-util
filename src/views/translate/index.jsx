@@ -6,7 +6,11 @@ function VueJs() {
     <React.Fragment>
       <div className={styles.menu}>翻译</div>
       <div className={styles.content}>
-        <a href="https://www.youdao.com/" target="_blank">
+        <a
+          href="https://www.youdao.com/"
+          target="_blank"
+          className={styles.link}
+        >
           <div className={styles.card}>
             <img width="32px" height="32px" src={youdaoLogo} alt="加载失败" />
             <div>
