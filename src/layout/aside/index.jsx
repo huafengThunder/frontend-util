@@ -22,7 +22,7 @@ function Sider() {
             <li onClick={(e) => nemuClick(e, 'Css')}>css</li>
             <li onClick={(e) => nemuClick(e, 'Html')}>html</li>
             <li onClick={(e) => nemuClick(e, 'Js')}>js</li>
-            <li onClick={(e) => nemuClick(e, 'BuildTools')}>构建工具</li>
+            <li onClick={(e) => nemuClick(e, 'BuildTools')}>bundle/cli</li>
             <li onClick={(e) => nemuClick(e, 'Compatibility')}>兼容性</li>
             <li onClick={(e) => nemuClick(e, 'Mdn')}>mdn</li>
           </ul>
