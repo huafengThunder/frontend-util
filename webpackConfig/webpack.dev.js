@@ -5,7 +5,7 @@ const pathResolve = _path => path.resolve(__dirname, _path) // 解析成绝对�
 config = {
   devServer: {
     compress: true,
-    static: pathResolve ('../public'),
+    static: pathResolve ('../static'),
     port: 8000,
     hot: true,
     open: true,
