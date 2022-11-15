@@ -2,10 +2,11 @@ import React from 'react'
 import Card from '../../components/card'
 import viteLogo from './imgs/vite-logo.svg'
 import webpackLogo from './imgs/webpack-logo.png'
-import rollupLogo from './imgs/rollup.jpg'
+import rollupLogo from './imgs/rollup.png'
+import parcelLogo from './imgs/parcel-logo.png'
 function Translate() {
   const data = {
-    menu: 'bundle/cli',
+    menu: 'build/cli',
     card: [
       {
         logo: viteLogo,
@@ -24,6 +25,12 @@ function Translate() {
         href: 'https://www.rollupjs.com/',
         title: 'Rollup',
         describe: 'ES6版本Javascript模块打包工具',
+      },
+      {
+        logo: parcelLogo,
+        href: 'https://parceljs.org/docs/',
+        title: 'parcel',
+        describe: '零配置构建工具',
       },
     ],
   }

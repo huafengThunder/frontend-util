@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../../components/card'
 import vueLogo from './imgs/vue-logo.svg'
 import piniaLogo from './imgs/pinia-logo.svg'
-import viteLogo from './imgs/vite-logo.svg'
+import vueuseLogo from './imgs/vueuse-logo.svg'
 function VueJs() {
   const data = {
     menu: 'vue生态',
@@ -32,11 +32,17 @@ function VueJs() {
         describe: '拥有组合式API的Vue状态管理库',
       },
       {
+        logo: vueuseLogo,
+        href: 'https://vueuse.org/',
+        title: 'VueUse',
+        describe: '基于组合式api的实用函数集合',
+      },
+      {
         logo: vueLogo,
         href: 'https://cli.vuejs.org/zh/guide/',
         title: 'Vue CLI',
         describe: '基于Vue进行快速开发的完整系统',
-      }
+      },
     ],
   }
   return (
