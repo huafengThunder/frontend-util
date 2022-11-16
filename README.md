@@ -6,10 +6,11 @@
   - json格式化
 - 手册
   - vue生态
+    - uniapp
   - react生态
   - html
   - css
-  - js(改为js/拓展语言)
+  - js/拓展语言
   - bundle/cli
   - 兼容性
   - 转译器
