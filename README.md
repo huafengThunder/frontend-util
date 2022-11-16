@@ -3,20 +3,26 @@
 #### 目录
 - 工具
   - 翻译
-  - json格式化(https://www.sojson.com/)
+  - json格式化
 - 手册
   - vue生态
-    - uniapp
   - react生态
   - html
   - css
   - js/拓展语言
   - bundle/cli
+  - 包管理器
+    - npm
+    - yarn
+    - pnpm
   - 兼容性
   - 转译器
+  - 快应用
 - 社区
 - 算法
 - 代码编辑工具
+- 在线ide
+  - https://developer.stackblitz.com/guides/user-guide/what-is-stackblitz(vpn)
 - 仓库
 - UI
 - 产品

@@ -4,6 +4,7 @@ import viteLogo from './imgs/vite-logo.svg'
 import webpackLogo from './imgs/webpack-logo.png'
 import rollupLogo from './imgs/rollup.png'
 import parcelLogo from './imgs/parcel-logo.png'
+import turboLogo from './imgs/turbo-logo.png'
 function Translate() {
   const data = {
     menu: 'build/cli',
@@ -31,6 +32,12 @@ function Translate() {
         href: 'https://parceljs.org/docs/',
         title: 'parcel',
         describe: '零配置构建工具',
+      },
+      {
+        logo: turboLogo,
+        href: 'https://turbo.build/',
+        title: 'parcel',
+        describe: 'js/ts智能构建系统',
       },
     ],
   }

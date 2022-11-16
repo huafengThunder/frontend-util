@@ -9,6 +9,8 @@ import JavaScript from '../../views/javascript/index'
 import CommonTools from '../../views/common-tools/index'
 import BuildTools from '../../views/build-tools/index'
 import Compatibility from '../../views/compatibility/index'
+import Compiler from '../../views/compiler/index'
+import FastApp from '../../views/fast-app/index'
 import Community from '../../views/community/index'
 import Algorithm from '../../views/algorithm/index'
 import Repository from '../../views/repository/index'
@@ -30,7 +32,9 @@ function Main() {
       {curMenu === 'Css' ? <Css /> : <React.Fragment />}
       {curMenu === 'JavaScript' ? <JavaScript /> : <React.Fragment />}
       {curMenu === 'CommonTools' ? <CommonTools /> : <React.Fragment />}
+      {curMenu === 'Compiler' ? <Compiler /> : <React.Fragment />}
       {curMenu === 'Compatibility' ? <Compatibility /> : <React.Fragment />}
+      {curMenu === 'FastApp' ? <FastApp /> : <React.Fragment />}
       {curMenu === 'BuildTools' ? <BuildTools /> : <React.Fragment />}
       {curMenu === 'Community' ? <Community /> : <React.Fragment />}
       {curMenu === 'Algorithm' ? <Algorithm /> : <React.Fragment />}

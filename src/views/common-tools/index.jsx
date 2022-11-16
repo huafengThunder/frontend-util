@@ -14,7 +14,7 @@ function Translate() {
       },
       {
         logo: jsonLogo,
-        href: 'http://www.jsons.cn/jsoncheck/',
+        href: 'https://www.sojson.com/',
         title: 'json格式化',
         describe: '在线json格式化工具',
       },
