@@ -8,6 +8,7 @@ import Css from '../../views/css/index'
 import JavaScript from '../../views/javascript/index'
 import CommonTools from '../../views/common-tools/index'
 import BuildTools from '../../views/build-tools/index'
+import VersionControl from '../../views/version-control/index'
 import Compatibility from '../../views/compatibility/index'
 import Compiler from '../../views/compiler/index'
 import FastApp from '../../views/fast-app/index'
@@ -36,6 +37,7 @@ function Main() {
       {curMenu === 'Compatibility' ? <Compatibility /> : <React.Fragment />}
       {curMenu === 'FastApp' ? <FastApp /> : <React.Fragment />}
       {curMenu === 'BuildTools' ? <BuildTools /> : <React.Fragment />}
+      {curMenu === 'VersionControl' ? <VersionControl /> : <React.Fragment />}
       {curMenu === 'Community' ? <Community /> : <React.Fragment />}
       {curMenu === 'Algorithm' ? <Algorithm /> : <React.Fragment />}
       {curMenu === 'Repository' ? <Repository /> : <React.Fragment />}
