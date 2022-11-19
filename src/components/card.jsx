@@ -3,7 +3,7 @@ import styles from './index.module.less'
 export default function Card(props) {
   return (
     <React.Fragment>
-      <div className={styles.menu}>{props.data?.menu}</div>
+      <div className={styles.menu}>{props.data?.title}</div>
       <div className={styles.content}>
         {props.data?.card.map((item,index) => {
           return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from './layout/index.jsx'
+import Nav from './layout/frontend-nav/index'
 function App() {
-  return <Layout />
+  return <Nav />
 }
 export default App
