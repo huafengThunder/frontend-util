@@ -32,7 +32,7 @@ function Sider() {
   arr.forEach((value, key) => {
     Li.push(
       <li key={key}>
-        <p
+        <h1
           className={
             value?.eventName === activeMenu ||
             (Array.isArray(value) &&
@@ -43,7 +43,7 @@ function Sider() {
           onClick={(e) => nemuClick(e, value.eventName || value[0].eventName)}
         >
           {key}
-        </p>
+        </h1>
         {Array.isArray(value) ? (
           <ul>
             {value.map((item) => (
@@ -52,7 +52,9 @@ function Sider() {
                 className={item.eventName === activeMenu ? styles.active : ''}
                 onClick={(e) => nemuClick(e, item.eventName)}
               >
-                {item.title}
+                <p>
+                  {item.title}
+                </p>
               </li>
             ))}
           </ul>
