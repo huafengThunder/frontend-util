@@ -44,7 +44,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: pathResolve('../src/index.html'),
       title: '前端导航',
-      favicon: pathResolve('../static/imgs/logo.awebp') // 在此处设置
+      favicon: pathResolve('../public/imgs/logo.awebp') // 在此处设置
     })
   ],
   resolve: {

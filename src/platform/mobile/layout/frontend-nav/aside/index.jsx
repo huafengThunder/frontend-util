@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import styles from './index.module.less'
-import Data from '../data'
+import Data from '@/static/frontend-nav/menu-data'
 import EventBus from '@/utils/event-bus'
 
 function reveresFlat(data) {
