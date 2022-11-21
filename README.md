@@ -1,6 +1,6 @@
-#### frontend-util
+### frontend-util
 前端常用工具
-###### 目录
+#### 目录
 - 手册
   - vue生态
   - react生态
@@ -20,7 +20,7 @@
   - json格式化
   - nvm
   - postman
-  - whilst(哦包工具)
+  - whilst(抓包工具)
 - 社区
 - 算法
 - 代码编辑工具
