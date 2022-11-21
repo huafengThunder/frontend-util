@@ -179,6 +179,30 @@ const data = {
       },
     ],
   },
+  PackageManager: {
+    menu: '手册',
+    title: '包管理器',
+    card: [
+      {
+        logo: require('./main/imgs/package-manager/npm-logo.png'),
+        href: 'https://www.npmjs.com/',
+        title: 'npm',
+        describe: 'node package manager',
+      },
+      {
+        logo: require('./main/imgs/package-manager/yarn-logo.png'),
+        href: 'https://yarn.bootcss.com/docs/usage',
+        title: 'yarn',
+        describe: 'node包管理器',
+      },
+      {
+        logo: require('./main/imgs/package-manager/pnpm-logo.png'),
+        href: 'https://pnpm.io/zh/motivation',
+        title: 'pnpm',
+        describe: '软链的方式添加依赖',
+      }
+    ],
+  },
   VersionControl: {
     menu: '手册',
     title: '版本控制',
@@ -315,7 +339,7 @@ const data = {
       },
     ],
   },
-  Algorithm: {
+  Algoritham: {
     title: '算法刷题',
     card: [
       {
@@ -335,6 +359,12 @@ const data = {
   CodeEditingTool: {
     title: '代码编辑工具',
     card: [
+      {
+        logo: require('./main/imgs/code-editing-tool/staticblitz-logo.png'),
+        href: 'https://stackblitz.com/',
+        title: 'stackblitz',
+        describe: '在线开发工具(ide)',
+      },
       {
         logo: require('./main/imgs/code-editing-tool/code-editing-tool-logo.png'),
         href: 'https://codepen.io/',

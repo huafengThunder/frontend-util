@@ -4,6 +4,7 @@
 - 工具
   - 翻译
   - json格式化
+  - nvm
 - 手册
   - vue生态
   - react生态
@@ -12,10 +13,7 @@
   - js/拓展语言
   - bundle/cli
   - 包管理器
-    - npm
-    - yarn
-    - pnpm
-  - 版本管理工具
+  - 版本控制
     - git官网
     - git常用指令
   - 兼容性
@@ -24,8 +22,9 @@
 - 社区
 - 算法
 - 代码编辑工具
-  - https://developer.stackblitz.com/guides/user-guide/what-is-stackblitz(vpn)
-- 在线ide
+- ide
+  - vscode
+  - Hbuilder X
 - 仓库
 - UI
 - 产品
