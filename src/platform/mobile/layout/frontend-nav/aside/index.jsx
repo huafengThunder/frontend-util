@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import styles from './index.module.less'
 import Data from '../data'
-import EventBus from '../../../utils/event-bus'
+import EventBus from '@/utils/event-bus'
 
 function reveresFlat(data) {
   const menu = new Map()

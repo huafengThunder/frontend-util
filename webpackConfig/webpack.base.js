@@ -50,8 +50,8 @@ module.exports = {
   resolve: {
     extensions:['.js','.jsx'],
     alias: {
-      '@': pathResolve('src'),
-      '@c': pathResolve('src/components')
+      '@': pathResolve('../src'),
+      '@pc-components': pathResolve('../src/platform/pc/components')
     }
   }
 }

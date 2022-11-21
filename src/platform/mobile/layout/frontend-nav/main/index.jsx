@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './index.module.less'
-import EventBus from '../../../utils/event-bus'
+import EventBus from '@/utils/event-bus'
 import Card from '../../../components/card'
 import Data from '../data'
 function Main() {
