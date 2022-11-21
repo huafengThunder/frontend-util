@@ -288,7 +288,7 @@ const data = {
     ],
   },
   CommonTools: {
-    title: '工具',
+    title: '常用工具',
     card: [
       {
         logo: require('./main/imgs/common-tools/youdao-logo.jpg'),
@@ -301,6 +301,12 @@ const data = {
         href: 'https://www.sojson.com/',
         title: 'json格式化',
         describe: '在线json格式化工具',
+      },
+      {
+        logo: require('./main/imgs/common-tools/nvm-logo.png'),
+        href: 'https://github.com/nvm-sh/nvm/releases',
+        title: 'nvm',
+        describe: 'node version manager',
       },
     ],
   },
