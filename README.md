@@ -1,6 +1,6 @@
 #### frontend-util
 前端常用工具
-#### 目录
+###### 目录
 - 手册
   - vue生态
   - react生态
@@ -19,6 +19,8 @@
   - 翻译
   - json格式化
   - nvm
+  - postman
+  - whilst
 - 社区
 - 算法
 - 代码编辑工具
@@ -26,6 +28,7 @@
   - vscode
   - Hbuilder X
 - 仓库
+  - 开源项目
 - UI
 - 产品
   - 流程图绘制工具
