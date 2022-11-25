@@ -1,4 +1,39 @@
 const data = {
+  CommonTools: {
+    title: '常用工具',
+    card: [
+      {
+        logo: require('./imgs/common-tools/youdao-logo.jpg'),
+        href: 'https://www.youdao.com/',
+        title: '有道词典',
+        describe: '集成中、英、日、韩、法多语种词典',
+      },
+      {
+        logo: require('./imgs/common-tools/daxiaoxie-logo.png'),
+        href: 'https://www.iamwawa.cn/daxiaoxie.html',
+        title: '在线命名转换',
+        describe: '支持驼峰,大小写,下划线等',
+      },
+      {
+        logo: require('./imgs/common-tools/json-logo.png'),
+        href: 'https://www.sojson.com/',
+        title: 'json格式化',
+        describe: '在线json格式化工具',
+      },
+      {
+        logo: require('./imgs/common-tools/postman-logo.png'),
+        href: 'https://v7.apipost.cn/apis?utm_source=10039&bd_vid=8463452207854310318#/apis/run',
+        title: 'postman',
+        describe: 'postman web版本(不支持本地接口)',
+      },
+      {
+        logo: require('./imgs/common-tools/nvm-logo.png'),
+        href: 'https://github.com/nvm-sh/nvm/releases',
+        title: 'nvm',
+        describe: 'node version manager',
+      },
+    ],
+  },
   VueJs: {
     menu:'手册',
     title: 'vue生态',
@@ -287,29 +322,6 @@ const data = {
       },
     ],
   },
-  CommonTools: {
-    title: '常用工具',
-    card: [
-      {
-        logo: require('./imgs/common-tools/youdao-logo.jpg'),
-        href: 'https://www.youdao.com/',
-        title: '有道词典',
-        describe: '集成中、英、日、韩、法多语种词典',
-      },
-      {
-        logo: require('./imgs/common-tools/json-logo.png'),
-        href: 'https://www.sojson.com/',
-        title: 'json格式化',
-        describe: '在线json格式化工具',
-      },
-      {
-        logo: require('./imgs/common-tools/nvm-logo.png'),
-        href: 'https://github.com/nvm-sh/nvm/releases',
-        title: 'nvm',
-        describe: 'node version manager',
-      },
-    ],
-  },
   Community: {
     title: '社区',
     card: [
@@ -384,6 +396,41 @@ const data = {
         describe: '开放源码的协同Web开发调试工具',
       },
     ],
+  },
+  serverSide:{
+    title: '服务端',
+    card: [
+      {
+        logo: require('./imgs/server-side/nginx-logo.png'),
+        href: 'http://tengine.taobao.org/book/index.html',
+        title: 'nginx',
+        describe: 'nginx轻量级静态服务器',
+      },
+      {
+        logo: require('./imgs/server-side/docker-logo.webp'),
+        href: 'https://www.docker.com/',
+        title: 'docker',
+        describe: 'Develop faster. Run anywhere.',
+      },
+      {
+        logo: require('./imgs/server-side/whistle-logo.png'),
+        href: 'http://wproxy.org/whistle/',
+        title: 'whistle',
+        describe: '跨平台web调试代理工具',
+      },
+      {
+        logo: require('./imgs/server-side/pm2-logo.png'),
+        href: 'https://pm2.keymetrics.io/',
+        title: 'pm2',
+        describe: 'node.js的生产过程管理器',
+      },
+      {
+        logo: require('./imgs/server-side/nodemon-logo.svg'),
+        href: 'https://nodemon.io/',
+        title: 'nodemon',
+        describe: 'node.js的生产过程管理器',
+      },
+    ]
   },
   Repository: {
     title: '仓库',
