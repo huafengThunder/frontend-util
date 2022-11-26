@@ -398,7 +398,7 @@ const data = {
     ],
   },
   serverSide:{
-    title: '服务端',
+    title: '运维',
     card: [
       {
         logo: require('./imgs/server-side/nginx-logo.png'),
