@@ -397,7 +397,7 @@ const data = {
       },
     ],
   },
-  serverSide:{
+  Maintenance:{
     title: '运维',
     card: [
       {
@@ -406,7 +406,7 @@ const data = {
         title: 'nginx',
         describe: 'nginx轻量级静态服务器',
       },
-      {
+      { 
         logo: require('./imgs/server-side/docker-logo.webp'),
         href: 'https://www.docker.com/',
         title: 'docker',
