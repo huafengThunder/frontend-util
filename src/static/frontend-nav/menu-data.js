@@ -361,6 +361,12 @@ const data = {
         title: 'csdn',
         describe: '技术交流平台(文章?都懂)',
       },
+      {
+        logo: require('./imgs/community/zhihu-logo.png'),
+        href: 'https://www.zhihu.com/',
+        title: '知乎',
+        describe: '中文互联网高质量的问答社区',
+      },
     ],
   },
   Algoritham: {
