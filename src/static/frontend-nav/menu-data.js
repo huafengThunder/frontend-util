@@ -88,7 +88,7 @@ const data = {
       },
       {
         logo: require('./imgs/react/react-router-logo.png'),
-        href: 'https://reactrouter.com/en',
+        href: 'https://reactrouter.com/en/main',
         title: 'React Router',
         describe: 'React官方路由',
       },
