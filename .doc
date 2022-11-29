@@ -1,8 +1,11 @@
 - babel-loader@9对于node的版本有要求的(babel-loader9.x	webpack5.x	npm^7.12.0	>= node14.15.0)
 - 颜色设计参考https://www.seeseed.com/
   - #AFF211 #FCF912 #E6CE1C #FCCA12 #F2AB11
-- 任务2022.11.26
-  - 抽取移动端、pc公共代码
+- task2022.11.26
+  - 抽取移动端、pc公共代码 √
   - 建立后台模块
     - 登录模块
-  - 调整菜单内容
+  - 调整菜单内容 √
+- task2022.11.30
+  - 设计PC路由
+  - 完成静态博客页面
