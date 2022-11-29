@@ -390,6 +390,12 @@ const data = {
         describe: '在线开发工具(ide)',
       },
       {
+        logo: require('./imgs/code-editing-tool/codesandbox-logo.png'),
+        href: 'https://codesandbox.io/s/',
+        title: 'CodeSandbox',
+        describe: '基于React的在线代码沙盒平台',
+      },
+      {
         logo: require('./imgs/code-editing-tool/code-editing-tool-logo.png'),
         href: 'https://codepen.io/',
         title: 'codepen',
