@@ -84,7 +84,7 @@ const data = {
         logo: require('./imgs/react/react-logo.svg'),
         href: 'https://react.docschina.org/',
         title: 'React',
-        describe: '用于构建用户界面的JavaScript 库',
+        describe: '用于构建用户界面的JavaScript库',
       },
       {
         logo: require('./imgs/react/react-router-logo.png'),
@@ -103,6 +103,12 @@ const data = {
         href: 'https://react-redux.js.org/',
         title: 'React Redux',
         describe: 'Official React bindings for Redux',
+      },
+      {
+        logo: require('./imgs/react/ahooks-logo.svg'),
+        href: 'https://ahooks.js.org/',
+        title: 'ahooks',
+        describe: 'React Hooks library',
       },
       {
         logo: require('./imgs/react/react-logo.svg'),
