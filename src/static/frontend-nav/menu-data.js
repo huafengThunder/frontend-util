@@ -118,6 +118,18 @@ const data = {
       },
     ],
   },
+  AngularJS: {
+    menu: '手册',
+    title: 'AngularJS生态',
+    card: [
+      {
+        logo: require('./imgs/angular/angular-logo.png'),
+        href: 'https://angular.cn/start/start-data',
+        title: 'AngularJS',
+        describe: 'Angular是一个应用设计框架与开发平台,旨在创建高效而精致的单页面应用',
+      }
+    ]
+  },
   Html: {
     menu: '手册',
     title: 'html',
@@ -180,6 +192,12 @@ const data = {
         logo: require('./imgs/javascript/ts-logo.png'),
         href: 'https://www.tslang.cn/docs/handbook/symbols.html',
         title: 'typescript',
+        describe: 'JavaScript类型的超集',
+      },
+      {
+        logo: require('./imgs/javascript/JavaScript-guide-logo.png'),
+        href: 'https://wangdoc.com/javascript/',
+        title: 'JavaScript教程',
         describe: 'JavaScript类型的超集',
       },
     ],
@@ -304,6 +322,52 @@ const data = {
         describe: 'Can I use__?',
       },
     ],
+  },
+  ComponentLibrary: {
+    title: '组件库',
+    card: [
+      {
+        logo: require('./imgs/component-library/element-plus-logo.png'),
+        href: 'https://element-plus.gitee.io/zh-CN/#/zh-CN',
+        title: 'element-plus',
+        describe: '基于Vue3，面向设计师和开发者的组件库',
+      },
+      {
+        logo: require('./imgs/component-library/element-logo.png'),
+        href: 'https://element.eleme.cn/#/zh-CN',
+        title: 'Element',
+        describe: '一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库件库',
+      },
+      {
+        logo: require('./imgs/component-library/antdesign-logo.svg'),
+        href: 'https://ant.design/index-cn',
+        title: 'Ant Design', 
+        describe: '支持vue/react/angular',
+      },
+      {
+        logo: require('./imgs/component-library/bootstrap-logo.png'),
+        href: 'https://getbootstrap.com/docs/5.2/getting-started/introduction/',
+        title: 'Element',
+        describe: 'Bootstrap is a powerful, feature-packed frontend toolkit',
+      },
+    ]
+  },
+  MicroFrontend : {
+    title: '微前端',
+    card: [
+      {
+        logo: require('./imgs/micro-frontend/qiankun-logo.png'),
+        href: 'https://qiankun.umijs.org/zh/guide',
+        title: 'qiankun',
+        describe: 'qiankun是一个基于single-spa的微前端实现库',
+      },
+      {
+        logo: require('./imgs/micro-frontend/single-spa-logo.svg'),
+        href: 'https://single-spa.js.org/docs/getting-started-overview',
+        title: 'single-spa',
+        describe: 'bringing together multiple JavaScript microfrontends in a frontend application',
+      }
+    ]
   },
   FastApp: {
     title: '快应用',
