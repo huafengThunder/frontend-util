@@ -32,6 +32,12 @@ const data = {
         title: 'nvm',
         describe: 'node version manager',
       },
+      {
+        logo: require('./imgs/common-tools/svgtopng.svg'),
+        href: 'https://svgtopng.com/zh/',
+        title: 'svgtopng',
+        describe: '在线SVG转PNG',
+      },
     ],
   },
   VueJs: {
