@@ -155,7 +155,7 @@ const data = {
       {
         logo: require('./imgs/css/css-logo.png'),
         href: 'https://www.apiref.com/css-zh/index.htm',
-        title: 'sass',
+        title: 'CSS手册',
         describe: 'CSS3中文手册',
       },
       {
