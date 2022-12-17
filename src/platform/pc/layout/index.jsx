@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
+import MouseOverPopover from '../components/MouseOverPopover'
 import styles from './index.module.less'
 
 function Layout() {
@@ -17,7 +18,6 @@ function Layout() {
   }
   function viaClick(){
     setCurList('')
-    navigate('/blog')
   }
   return (
     <React.Fragment>
@@ -34,7 +34,9 @@ function Layout() {
           ))}
         </section>
         <section className={styles.right}>
-          <div className={styles.via} onClick={() => viaClick()}></div>
+          <MouseOverPopover>
+            <div className={styles.via} onClick={() => viaClick()}></div>
+          </MouseOverPopover >
         </section>
       </div>
       <Outlet />

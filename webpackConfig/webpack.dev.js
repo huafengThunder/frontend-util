@@ -9,7 +9,8 @@ config = {
     port: 8000,
     hot: true,
     open: true,
-    hot: true
+    hot: true,
+    historyApiFallback: true
   },
   mode: 'development',
   devtool: 'inline-source-map',

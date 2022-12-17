@@ -38,6 +38,18 @@ module.exports = {
         // More information here https://webpack.js.org/guides/asset-modules/
         type: "asset",
       },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: "html-loader",
+          },
+          {
+            loader: "markdown-loader",
+            options: {},
+          },
+        ],
+      }
     ]
   },
   plugins: [
@@ -48,7 +60,7 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions:['.js','.jsx'],
+    extensions: ['.js', '.jsx'],
     alias: {
       '@': pathResolve('../src'),
       '@pc-components': pathResolve('../src/platform/pc/components')

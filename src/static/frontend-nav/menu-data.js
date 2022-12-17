@@ -351,11 +351,17 @@ const data = {
         describe: '支持vue/react/angular',
       },
       {
+        logo: require('./imgs/component-library/material-ui.png'),
+        href: 'https://mui.com/material-ui/getting-started/overview/',
+        title: 'material-ui',
+        describe: `Material UI is a library of React UI components that implements Google's Material Design.`,
+      },
+      {
         logo: require('./imgs/component-library/bootstrap-logo.png'),
         href: 'https://getbootstrap.com/docs/5.2/getting-started/introduction/',
         title: 'Element',
         describe: 'Bootstrap is a powerful, feature-packed frontend toolkit',
-      },
+      }
     ]
   },
   MicroFrontend : {
