@@ -40,6 +40,47 @@ const data = {
       },
     ],
   },
+  Community: {
+    title: '社区',
+    card: [
+      {
+        logo: require('./imgs/community/stackoverflow.png'),
+        href: 'https://stackoverflow.com/',
+        title: 'stackoverflow',
+        describe: '全球最大it问答社区',
+      },
+      {
+        logo: require('./imgs/community/juejin-logo.png'),
+        href: 'https://juejin.cn/',
+        title: '掘金',
+        describe: '中文开发者的技术内容分享与交流平台',
+      },
+      {
+        logo: require('./imgs/community/segmentfault-logo.png'),
+        href: 'https://segmentfault.com/',
+        title: '思否',
+        describe: '开发者技术问答社区(偏客户端)',
+      },
+      {
+        logo: require('./imgs/community/cnblogs.svg'),
+        href: 'https://www.cnblogs.com/',
+        title: '博客园',
+        describe: '知识分享社区(博客)',
+      },
+      {
+        logo: require('./imgs/community/csdn-logo.png'),
+        href: 'https://www.csdn.net/',
+        title: 'csdn',
+        describe: '技术交流平台(文章?都懂)',
+      },
+      {
+        logo: require('./imgs/community/zhihu-logo.png'),
+        href: 'https://www.zhihu.com/',
+        title: '知乎',
+        describe: '中文互联网高质量的问答社区',
+      },
+    ],
+  },
   VueJs: {
     menu:'手册',
     title: 'vue生态',
@@ -401,47 +442,6 @@ const data = {
         href: 'https://mp.weixin.qq.com/',
         title: '微信公众后台',
         describe: '微信小程序开发后台',
-      },
-    ],
-  },
-  Community: {
-    title: '社区',
-    card: [
-      {
-        logo: require('./imgs/community/stackoverflow.png'),
-        href: 'https://stackoverflow.com/',
-        title: 'stackoverflow',
-        describe: '全球最大it问答社区',
-      },
-      {
-        logo: require('./imgs/community/juejin-logo.png'),
-        href: 'https://juejin.cn/',
-        title: '掘金',
-        describe: '中文开发者的技术内容分享与交流平台',
-      },
-      {
-        logo: require('./imgs/community/segmentfault-logo.png'),
-        href: 'https://segmentfault.com/',
-        title: '思否',
-        describe: '开发者技术问答社区(偏客户端)',
-      },
-      {
-        logo: require('./imgs/community/cnblogs.svg'),
-        href: 'https://www.cnblogs.com/',
-        title: '博客园',
-        describe: '知识分享社区(博客)',
-      },
-      {
-        logo: require('./imgs/community/csdn-logo.png'),
-        href: 'https://www.csdn.net/',
-        title: 'csdn',
-        describe: '技术交流平台(文章?都懂)',
-      },
-      {
-        logo: require('./imgs/community/zhihu-logo.png'),
-        href: 'https://www.zhihu.com/',
-        title: '知乎',
-        describe: '中文互联网高质量的问答社区',
       },
     ],
   },
