@@ -38,6 +38,12 @@ const data = {
         title: 'svgtopng',
         describe: '在线SVG转PNG',
       },
+      {
+        logo: require('./imgs/common-tools/jsregex-logo.png'),
+        href: 'hhttps://www.lddgo.net/string/jsregex',
+        title: '在线正则验证',
+        describe: 'JavaScript正则表达式测试',
+      },
     ],
   },
   Community: {
