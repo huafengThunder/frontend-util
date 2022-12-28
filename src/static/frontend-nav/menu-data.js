@@ -48,7 +48,7 @@ const data = {
         logo: require('./imgs/common-tools/jsregex-logo.png'),
         href: 'https://chat.openai.com/chat',
         title: 'chat GPT',
-        describe: 'GPT是OpenAI的一种大型语言模型，可用于各种应用，包括文本生成、问答、机器翻译等',
+        describe: 'GPT是OpenAI语言模型，可文本生成、问答、机器翻译等',
       },
     ],
   },
