@@ -39,10 +39,16 @@ const data = {
         describe: '在线SVG转PNG',
       },
       {
-        logo: require('./imgs/common-tools/jsregex-logo.png'),
-        href: 'hhttps://www.lddgo.net/string/jsregex',
+        logo: require('./imgs/common-tools/chatGPT-logo.png'),
+        href: 'https://www.lddgo.net/string/jsregex',
         title: '在线正则验证',
         describe: 'JavaScript正则表达式测试',
+      },
+      {
+        logo: require('./imgs/common-tools/jsregex-logo.png'),
+        href: 'https://chat.openai.com/chat',
+        title: 'chat GPT',
+        describe: 'GPT是OpenAI的一种大型语言模型，可用于各种应用，包括文本生成、问答、机器翻译等',
       },
     ],
   },
