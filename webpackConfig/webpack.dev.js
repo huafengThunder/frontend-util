@@ -10,7 +10,13 @@ config = {
     hot: true,
     open: true,
     hot: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    proxy:{
+      '/feutil': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+      },
+    }
   },
   mode: 'development',
   devtool: 'inline-source-map',
