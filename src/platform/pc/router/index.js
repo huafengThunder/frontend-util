@@ -1,10 +1,10 @@
 import React from "react"
 import { createBrowserRouter } from "react-router-dom"
-import ErrorPage from '../components/ErrorPage'
-import Layout from '../platform/pc/layout'
-import FrontendNav from '../platform/pc/views/frontend-nav'
-import Blog from '../platform/pc/views/blog'
-import ChatGPT from '../platform/pc/views/chat-gpt'
+import ErrorPage from '../../../components/ErrorPage'
+import Layout from '../layout'
+import FrontendNav from '../views/frontend-nav'
+import Blog from '../views/blog'
+import ChatGPT from '../views/chat-gpt'
 
 export default createBrowserRouter([
   {
