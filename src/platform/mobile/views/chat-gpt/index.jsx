@@ -38,7 +38,7 @@ function Layout() {
       <div className={styles.search}>
         <input autoFocus={true} onKeyUp={keyup} className={styles.input} type="text" />
         <button onClick={()=>setList([])} className={styles.button}>
-          clear record
+          clear
         </button>
       </div>
     </section>

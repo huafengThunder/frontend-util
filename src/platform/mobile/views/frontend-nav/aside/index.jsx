@@ -26,7 +26,7 @@ function reveresFlat(data) {
 }
 
 function Sider() {
-  const [activeMenu, setActiveMenu] = useState('VueJs')
+  const [activeMenu, setActiveMenu] = useState('CommonTools')
   const arr = reveresFlat(Data)
   const Li = []
   arr.forEach((value, key) => {

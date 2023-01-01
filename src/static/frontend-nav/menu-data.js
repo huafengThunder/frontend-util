@@ -48,7 +48,7 @@ const data = {
         logo: require('./imgs/common-tools/jsregex-logo.png'),
         href: 'https://chat.openai.com/chat',
         title: 'chat GPT',
-        describe: 'GPT是OpenAI语言模型，可文本生成、问答、机器翻译等',
+        describe: 'GPT是OpenAI语言模型，可生成文本回答',
       },
     ],
   },
@@ -147,7 +147,7 @@ const data = {
       },
       {
         logo: require('./imgs/react/react-router-logo.png'),
-        href: 'https://reactrouter.com/en/main',
+        href: 'https://reactrouter.com/en/6.6.1/start/overview',
         title: 'React Router',
         describe: 'React官方路由',
       },

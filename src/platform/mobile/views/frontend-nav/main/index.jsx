@@ -4,7 +4,7 @@ import EventBus from '@/utils/event-bus'
 import Card from '../../../components/card'
 import Data from '@/static/frontend-nav/menu-data'
 function Main() {
-  const [curMenu, setCurMenu] = useState('VueJs')
+  const [curMenu, setCurMenu] = useState('CommonTools')
   const data = Data
   useEffect(() => {
     EventBus.addListener('nemuClick', async (msgType) => {
