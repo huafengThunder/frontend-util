@@ -1,3 +1,11 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FAQs {
+  margin-bottom: 60px;
+}
 .question-answer {
   width: 768px;
   margin: 0 auto;
@@ -22,6 +30,9 @@
   .question-answer();
   line-height: 1.7;
   background-color: rgb(247, 247, 248);
+  // :last-child {
+  //   margin-bottom: 60px;
+  // }
   pre {
     white-space: pre-wrap; /* css-3 */
     white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
@@ -31,7 +42,7 @@
   }
 }
 .search {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
