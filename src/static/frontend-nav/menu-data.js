@@ -457,6 +457,29 @@ const data = {
       },
     ],
   },
+  backend:{
+    title: '后端',
+    card: [
+      {
+        logo: require('./imgs/backend/nest-logo.png'),
+        href: 'https://docs.nestjs.com/',
+        title: 'nestjs',
+        describe: '类似spring的服务端框架',
+      },
+      // {
+      //   logo: require('./imgs/backend/express-logo.png'),
+      //   href: 'https://koajs.com/',
+      //   title: 'koajs',
+      //   describe: '轻量级web框架',
+      // },
+      {
+        logo: require('./imgs/backend/express-logo.png'),
+        href: 'https://www.expressjs.com.cn/',
+        title: 'expressjs',
+        describe: '快速、开放、极简的 Web 开发老牌框架',
+      }
+    ],
+  },
   Algoritham: {
     title: '算法刷题',
     card: [
