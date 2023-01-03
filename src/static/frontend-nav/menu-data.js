@@ -458,7 +458,7 @@ const data = {
     ],
   },
   backend:{
-    title: '后端',
+    title: '服务端',
     card: [
       {
         logo: require('./imgs/backend/nest-logo.png'),
