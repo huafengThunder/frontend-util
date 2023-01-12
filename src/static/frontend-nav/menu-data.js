@@ -412,7 +412,7 @@ const data = {
       {
         logo: require('./imgs/component-library/bootstrap-logo.png'),
         href: 'https://getbootstrap.com/docs/5.2/getting-started/introduction/',
-        title: 'Element',
+        title: 'Bootstrap',
         describe: 'Bootstrap is a powerful, feature-packed frontend toolkit',
       }
     ]
