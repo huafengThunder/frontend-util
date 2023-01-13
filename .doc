@@ -13,4 +13,5 @@
   - 关于Crypto对象介绍
 - bug
   - module.less依旧会有影响,对于相同文件名字
+- eslint虽然引入进来但是没有生效
 
