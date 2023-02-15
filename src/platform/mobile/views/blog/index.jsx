@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import marked from '@/utils/marked'
-import classNames from 'classNames'
+import classNames from 'classnames'
 import styles from './index.module.less'
 const blogUrls = []
 const blogFiles = require
