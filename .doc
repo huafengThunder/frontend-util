@@ -20,6 +20,7 @@
   - 关于sort(-)  ---1、使用坑点
   - JSON.parse ---1、使用坑点;2、对于对象无序,如何自己实现
   - 关于Crypto对象介绍
+  - 关于跨域的理解，nginx反向代理的配置如何解决qiankunjs的子应用跨域问题。origin/referer/host三者区别
 
 
 
