@@ -39,13 +39,13 @@ const data = {
         describe: '在线SVG转PNG',
       },
       {
-        logo: require('./imgs/common-tools/chatGPT-logo.png'),
+        logo: require('./imgs/common-tools/jsregex-logo.png'),
         href: 'https://www.lddgo.net/string/jsregex',
         title: '在线正则验证',
         describe: 'JavaScript正则表达式测试',
       },
       {
-        logo: require('./imgs/common-tools/jsregex-logo.png'),
+        logo: require('./imgs/common-tools/chatGPT-logo.png'),
         href: 'https://chat.openai.com/chat',
         title: 'chat GPT',
         describe: 'GPT是OpenAI语言模型，可生成文本回答',
@@ -569,6 +569,12 @@ const data = {
         href: 'https://nodemon.io/',
         title: 'nodemon',
         describe: 'node.js的生产过程管理器',
+      },
+      {
+        logo: 'linux',
+        href: 'https://cloud.tencent.com/developer/article/2254994',
+        title: 'linux常用指令',
+        describe: 'linux常用指令',
       },
     ]
   },

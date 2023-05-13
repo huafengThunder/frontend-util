@@ -1,11 +1,13 @@
 import React from 'react'
 import styles from './index.module.less'
-export default function Card(props) {
+import { isLinkBase64 } from '@/utils/common'
+export default function Card (props) {
   return (
     <React.Fragment>
       <div className={styles.menu}>{props.data?.title}</div>
       <div className={styles.content}>
-        {props.data?.card.map((item,index) => {
+        {props.data?.card.map((item, index) => {
+          let noText = isLinkBase64(item.logo)
           return (
             <a
               href={item.href}
@@ -14,11 +16,11 @@ export default function Card(props) {
               key={index}
             >
               <div className={styles.card}>
-                <img
+                {noText ? <img
                   width="32px"
                   height="32px"
                   src={item.logo}
-                />
+                /> : <p>{item.logo}</p>}
                 <div>
                   <b className={styles.title}>{item.title}</b>
                   <p className={styles.describe}>{item.describe}</p>
@@ -28,7 +30,7 @@ export default function Card(props) {
           )
         })}
       </div>
-    </React.Fragment>
+    </React.Fragment >
   )
 }
 

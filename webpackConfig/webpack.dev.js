@@ -13,8 +13,8 @@ config = {
     historyApiFallback: true,
     proxy:{
       '/feutil': {
-        // target: 'http://localhost:3000',
-        target: 'http://huafeng.site:3001',
+        target: 'http://localhost:3001',
+        // target: 'http://huafeng.site:3001',
         changeOrigin: true,
       },
     }
