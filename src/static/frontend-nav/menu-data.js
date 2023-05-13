@@ -457,6 +457,17 @@ const data = {
       },
     ],
   },
+  Network: {
+    title: '网络',
+    card: [
+      {
+        logo: require('./imgs/network/axios-logo.png'),
+        href: 'https://www.axios-http.cn/docs/intro',
+        title: 'axios',
+        describe: '基于 promise 网络请求库',
+      },
+    ],
+  },
   backend:{
     title: '服务端',
     card: [
