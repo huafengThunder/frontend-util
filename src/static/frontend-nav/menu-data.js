@@ -254,6 +254,12 @@ const data = {
         describe: 'Promise迷你书',
       },
       {
+        logo: 'Promise简介',
+        href: 'https://www.kancloud.cn/kancloud/promises-book/44251',
+        title: 'Promise迷你书',
+        describe: 'Promise核心内容',
+      },
+      {
         logo: require('./imgs/javascript/ts-logo.png'),
         href: 'https://www.tslang.cn/docs/handbook/symbols.html',
         title: 'typescript',
@@ -264,6 +270,12 @@ const data = {
         href: 'https://wangdoc.com/javascript/',
         title: 'JavaScript教程',
         describe: 'JavaScript类型的超集',
+      },
+      {
+        logo: 'js二十年',
+        href: 'https://cn.history.js.org/part-1.html',
+        title: 'JavaScript历程',
+        describe: 'JavaScript近期历史',
       },
     ],
   },
@@ -598,6 +610,12 @@ const data = {
         href: 'https://gitee.com/',
         title: 'gitee',
         describe: '国内开源仓库',
+      },
+      {
+        logo: 'git教程',
+        href: 'https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000',
+        title: 'git基本教程',
+        describe: '廖雪峰的博客--git教程',
       },
     ],
   },
