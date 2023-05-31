@@ -193,6 +193,12 @@ const data = {
         title: 'AngularJS 组件库',
         describe: 'Ant Design 的 Angular 实现，开发和服务于企业级后台产品',
       },
+      {
+        logo: 'https://ng-alain.com/assets/img/logo-color.svg',
+        href: 'https://ng-alain.com/components/loading/zh',
+        title: '基于ng-zorro-antd组件库的二次封装',
+        describe: '中台组件库',
+      },
     ]
   },
   Html: {
