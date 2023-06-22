@@ -239,7 +239,7 @@ const data = {
   },
   JavaScript: {
     menu: '手册',
-    title: 'js/拓展',
+    title: 'js书籍',
     card: [
       {
         logo: require('./imgs/javascript/es6-logo.png'),
@@ -282,6 +282,18 @@ const data = {
         href: 'https://cn.history.js.org/part-1.html',
         title: 'JavaScript历程',
         describe: 'JavaScript近期历史',
+      },
+    ],
+  },
+  Library: {
+    menu: '手册',
+    title: 'js库',
+    card: [
+      {
+        logo: 'https://www.lodashjs.com/img/lodash.png',
+        href: 'https://www.lodashjs.com/',
+        title: 'lodashjs',
+        describe: '提供众多模块化方法便于操作js',
       },
     ],
   },
