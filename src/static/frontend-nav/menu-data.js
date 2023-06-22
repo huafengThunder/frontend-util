@@ -373,6 +373,12 @@ const data = {
         title: 'Git手册',
         describe: 'git常用指令',
       },
+      {
+        logo: 'https://gitee.com/static/images/logo-black.svg?t=158106666',
+        href: 'https://gitee.com/go_web/git-document',
+        title: 'Git笔记',
+        describe: 'git常用操作',
+      },
     ],
   },
   Compiler: {
