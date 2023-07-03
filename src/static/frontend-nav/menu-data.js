@@ -94,7 +94,7 @@ const data = {
     ],
   },
   VueJs: {
-    menu:'手册',
+    menu: '手册',
     title: 'vue生态',
     card: [
       {
@@ -199,6 +199,12 @@ const data = {
         title: '基于ng-zorro-antd组件库的二次封装',
         describe: '中台组件库',
       },
+      {
+        logo: require('/public/imgs/logo.webp'),
+        href: 'https://gitee.com/go_web/angular-demo',
+        title: 'angular-demo',
+        describe: 'angular学习笔记',
+      }
     ]
   },
   Html: {
@@ -374,7 +380,7 @@ const data = {
         describe: 'git常用指令',
       },
       {
-        logo: 'https://gitee.com/static/images/logo-black.svg?t=158106666',
+        logo: require('/public/imgs/logo.webp'),
         href: 'https://gitee.com/go_web/git-document',
         title: 'Git笔记',
         describe: 'git常用操作',
@@ -442,7 +448,7 @@ const data = {
       {
         logo: require('./imgs/component-library/antdesign-logo.svg'),
         href: 'https://ant.design/index-cn',
-        title: 'Ant Design', 
+        title: 'Ant Design',
         describe: '支持vue/react/angular',
       },
       {
@@ -459,7 +465,7 @@ const data = {
       }
     ]
   },
-  MicroFrontend : {
+  MicroFrontend: {
     title: '微前端',
     card: [
       {
@@ -510,7 +516,7 @@ const data = {
       },
     ],
   },
-  backend:{
+  backend: {
     title: '服务端',
     card: [
       {
@@ -579,7 +585,7 @@ const data = {
       },
     ],
   },
-  Maintenance:{
+  Maintenance: {
     title: '运维',
     card: [
       {
@@ -588,7 +594,7 @@ const data = {
         title: 'nginx',
         describe: 'nginx轻量级静态服务器',
       },
-      { 
+      {
         logo: require('./imgs/server-side/docker-logo.webp'),
         href: 'https://www.docker.com/',
         title: 'docker',
