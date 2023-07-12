@@ -50,6 +50,18 @@ const data = {
         title: 'chat GPT',
         describe: 'GPT是OpenAI语言模型，可生成文本回答',
       },
+      {
+        logo: require('./imgs/common-tools/chatGPT-logo.png'),
+        href: 'https://yeyu1024.xyz/gpt.html',
+        title: 'GPT-3',
+        describe: '来源于油猴插件',
+      },
+      {
+        logo: 'z',
+        href: 'https://tool.chinaz.com/',
+        title: '在线ping',
+        describe: '来源于站长之家',
+      },
     ],
   },
   Community: {
