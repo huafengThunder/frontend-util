@@ -11,17 +11,13 @@
 }
 
 .link {
-  flex: 1;
-  margin-right: 10px;
-  background-color: #fff;
+  width: 20%;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 
-.link:last-child {
-  margin-right: 0;
-}
-
-.link:hover {
-  box-shadow: 0 6px 16px 0 #d6e0e8;
+.link:nth-child(5n) {
+  padding-right: 0;
 }
 
 .card {
@@ -30,8 +26,17 @@
   align-items: center;
   height: 88px;
   vertical-align: top;
+  background-color: #fff;
 
-  img,
+  &:hover {
+    box-shadow: 0 6px 16px 0 #d6e0e8;
+  }
+
+  >div {
+    flex: 1;
+  }
+
+  >img,
   >p {
     margin-left: 10px;
     margin-right: 10px;

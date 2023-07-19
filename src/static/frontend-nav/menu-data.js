@@ -62,6 +62,12 @@ const data = {
         title: '在线ping',
         describe: '来源于站长之家',
       },
+      {
+        logo: 'file-diff',
+        href: 'https://www.qianbo.com.cn/Tool/Text-Difference/',
+        title: '在线文件对比',
+        describe: '来源于站长之家',
+      },
     ],
   },
   Community: {
