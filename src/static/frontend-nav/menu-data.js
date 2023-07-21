@@ -202,13 +202,13 @@ const data = {
       {
         logo: require('./imgs/angular/angular-logo.png'),
         href: 'https://angular.cn/start/start-data',
-        title: 'Angular',
+        title: 'angular',
         describe: 'Angular是一个应用设计框架与开发平台,旨在创建高效而精致的单页面应用',
       },
       {
         logo: 'ng-zorro-antd',
         href: 'http://ng.ant.design/version/7.5.x/docs/introduce/zh',
-        title: 'Angular组件库',
+        title: 'angular组件库',
         describe: 'Ant Design 的 Angular 实现，开发和服务于企业级后台产品',
       },
       {
