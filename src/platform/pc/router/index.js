@@ -5,6 +5,7 @@ import Layout from '../layout'
 import FrontendNav from '../views/frontend-nav'
 import Blog from '../views/blog'
 import ChatGPT from '../views/chat-gpt'
+import Ebook from '../views/ebook'
 
 export default createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export default createBrowserRouter([
       {
         path: "chatGPT",
         element: <ChatGPT />
+      },
+      {
+        path: "ebook",
+        element: <Ebook />
       },
     ],
   }

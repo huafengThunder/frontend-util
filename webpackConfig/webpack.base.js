@@ -49,6 +49,15 @@ module.exports = {
             options: {},
           },
         ],
+      },
+      {
+        test: /\.pdf$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+          }
+        }]
       }
     ]
   },
@@ -63,6 +72,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
     alias: {
       '@': pathResolve('../src'),
+      '@public': pathResolve('../public'),
       '@pc-components': pathResolve('../src/platform/pc/components')
     }
   }

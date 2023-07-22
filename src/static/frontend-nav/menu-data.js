@@ -58,7 +58,7 @@ const data = {
       },
       {
         logo: 'z',
-        href: 'https://tool.chinaz.com/',
+        href: 'https://ping.chinaz.com/',
         title: '在线ping',
         describe: '来源于站长之家',
       },

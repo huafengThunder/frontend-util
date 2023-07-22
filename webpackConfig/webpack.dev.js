@@ -2,19 +2,27 @@ const path = require('path')
 const { merge } = require('webpack-merge')
 const baseConfig = require('./webpack.base')
 const pathResolve = _path => path.resolve(__dirname, _path) // 解析成绝对路径
+const localIp = 'http://localhost:3001'
+// const ip = 'http://huafeng.site:3001'
 config = {
   devServer: {
     compress: true,
-    static: pathResolve ('../static'),
+    static: {
+      directory: pathResolve('../public'),
+    },
     port: 8000,
     hot: true,
     open: true,
     hot: true,
+    // 表示当开发服务器无法找到对应的资源时，将所有的请求都指向 index.html
     historyApiFallback: true,
     proxy:{
       '/feutil': {
-        target: 'http://localhost:3001',
-        // target: 'http://huafeng.site:3001',
+        target: localIp || ip,
+        changeOrigin: true,
+      },
+      '/static': {
+        target: localIp || ip,
         changeOrigin: true,
       },
     }
