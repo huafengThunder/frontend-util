@@ -5,7 +5,7 @@ import styles from './index.module.less'
 
 function Layout() {
   const navigate = useNavigate()
-  const list = ['chatGPT', '前端导航']
+  const list = ['前端导航']
   const [curList, setCurList] = useState(list[0])
   function menuClick(item) {
     setCurList(item)
