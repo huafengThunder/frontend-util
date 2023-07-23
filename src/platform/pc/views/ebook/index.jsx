@@ -12,7 +12,9 @@ export default function Ebook() {
     return (
         <div className="pdf-view">
             {
-                pdfFile.map(i => <p>{i.name}</p>)
+                pdfFile.map(i =>
+                    <p key={i.path}>{i.name}</p>
+                )
             }
         </div>
     );
