@@ -2,8 +2,6 @@ const path = require('path')
 const { merge } = require('webpack-merge')
 const baseConfig = require('./webpack.base')
 const pathResolve = _path => path.resolve(__dirname, _path) // 解析成绝对路径
-const localIp = 'http://localhost:3001'
-// const ip = 'http://huafeng.site:3001'
 config = {
   devServer: {
     compress: true,
@@ -18,11 +16,11 @@ config = {
     historyApiFallback: true,
     proxy:{
       '/feutil': {
-        target: localIp || ip,
+        target: 'http://huafeng.site:3001',
         changeOrigin: true,
       },
       '/static': {
-        target: localIp || ip,
+        target: 'http://huafeng.site:3001',
         changeOrigin: true,
       },
     }
