@@ -4,7 +4,6 @@ import ErrorPage from '../../../components/ErrorPage'
 import Layout from '../layout'
 import FrontendNav from '../views/frontend-nav'
 import Blog from '../views/blog'
-import ChatGPT from '../views/chat-gpt'
 
 export default createBrowserRouter([
   {
@@ -22,7 +21,7 @@ export default createBrowserRouter([
       },
       {
         path: "/",
-        element: <ChatGPT />
+        element: <FrontendNav />
       },
     ],
   }

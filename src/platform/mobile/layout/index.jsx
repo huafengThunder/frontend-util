@@ -12,7 +12,7 @@ function Layout() {
     if (item === '前端导航') {
       navigate('/frontend-nav')
     }
-    if (item === 'chatGPT') {
+    if (item === '前端导航') {
       navigate('/')
     }
   }
