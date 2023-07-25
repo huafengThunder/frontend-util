@@ -5,18 +5,18 @@ import styles from './index.module.less'
 
 function Layout() {
   const navigate = useNavigate()
-  const list = ['前端导航']
+  const list = ['前端导航', '电子书']
   const [curList, setCurList] = useState(list[0])
   function menuClick(item) {
     setCurList(item)
     if (item === '前端导航') {
-      navigate('/frontend-nav')
-    }
-    if (item === '前端导航') {
       navigate('/')
     }
+    if (item === '电子书') {
+      navigate('/ebook')
+    }
   }
-  function viaClick(){
+  function viaClick() {
     setCurList('')
   }
   return (

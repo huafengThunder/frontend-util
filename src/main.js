@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import ReactDOM from 'react-dom/client'
 import judgePlatform from './utils/judgePlatform'
-import App from './platform/pc/app.jsx'
-import MobileApp from './platform/mobile/app'
+const PcApp = lazy(() => import('./platform/pc/app.jsx'));
+const MobileApp = lazy(() => import('./platform/mobile/app.jsx'));
 import './style/reset.less'
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(!judgePlatform() ? <App /> : <MobileApp />)
+root.render(!judgePlatform() ? <PcApp /> : <MobileApp />)

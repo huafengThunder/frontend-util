@@ -9,7 +9,7 @@ function openLogin() {
 export default function Header() {
     const navigate = useNavigate()
     // const list = ['前端导航', 'chatGPT', 'ebook']
-    const list = ['前端导航', 'ebook']
+    const list = ['前端导航', '电子书']
     const [curList, setCurList] = useState(list[0])
     function menuClick(item) {
         setCurList(item)
@@ -19,7 +19,7 @@ export default function Header() {
         if (item === 'chatGPT') {
             navigate('/chatGPT')
         }
-        if (item === 'ebook') {
+        if (item === '电子书') {
             navigate('/ebook')
         }
     }

@@ -4,6 +4,7 @@ import ErrorPage from '../../../components/ErrorPage'
 import Layout from '../layout'
 import FrontendNav from '../views/frontend-nav'
 import Blog from '../views/blog'
+import Ebook from '../views/ebook'
 
 export default createBrowserRouter([
   {
@@ -12,7 +13,7 @@ export default createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "frontend-nav",
+        path: "/",
         element: <FrontendNav />,
       },
       {
@@ -20,8 +21,8 @@ export default createBrowserRouter([
         element: <Blog />
       },
       {
-        path: "/",
-        element: <FrontendNav />
+        path: "ebook",
+        element: <Ebook />
       },
     ],
   }
