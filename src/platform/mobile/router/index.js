@@ -1,6 +1,6 @@
 import React from "react"
-import { createBrowserRouter, redirect } from "react-router-dom"
-import ErrorPage from '../../../components/ErrorPage'
+import { createBrowserRouter } from "react-router-dom"
+import ErrorPage from '../../../components/ErrorPage.jsx'
 import Layout from '../layout'
 import FrontendNav from '../views/frontend-nav'
 import Blog from '../views/blog'
