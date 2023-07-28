@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react'
-import marked from '@/utils/marked'
 import classNames from 'classnames'
 import styles from './index.module.less'
 const blogUrls = []
@@ -10,22 +9,16 @@ const blogFiles = require
     blogUrls.push(i.replace(/\.\//, '').replace(/.md$/, ''))
     return require('../../../../static/blog' + i.replace(/\.\//, '/'))
   })
-function Layout() {
+function Blog() {
   const mdRender = useRef(null)
+  const lastBlog = blogFiles[blogFiles.length - 1].default
   useEffect(() => {
-    mdRender.current.innerHTML = marked(blogFiles[blogFiles.length - 1].default)
-  }, [])
+    if (mdRender.current) {
+      mdRender.current.innerHTML = lastBlog
+    }
+  }, []);
   return (
     <section className={styles.blog}>
-      {/* <aside className={styles.blogMenu}>
-        <ul>
-          {blogUrls.map((item) => (
-            <li key={item}>
-              <h1>{blogUrls[blogUrls.length - 1]}</h1>
-            </li>
-          ))}
-        </ul>
-      </aside> */}
       <div
         className={classNames('markdown-body', styles.blogContent)}
         ref={mdRender}
@@ -34,4 +27,4 @@ function Layout() {
     </section>
   )
 }
-export default Layout
+export default Blog

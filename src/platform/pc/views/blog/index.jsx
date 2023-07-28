@@ -10,7 +10,7 @@ const blogFiles = require
     blogUrls.push(i.replace(/\.\//, '').replace(/.md$/, ''))
     return require('../../../../static/blog' + i.replace(/\.\//, '/'))
   })
-function Layout() {
+function Blog() {
   const mdRender = useRef(null)
   useEffect(() => {
     mdRender.current.innerHTML = marked(blogFiles[blogFiles.length - 1].default)
@@ -34,4 +34,4 @@ function Layout() {
     </div>
   )
 }
-export default Layout
+export default Blog
