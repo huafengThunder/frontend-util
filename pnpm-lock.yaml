@@ -35,6 +35,9 @@ dependencies:
   react-pdf:
     specifier: ^7.2.0
     version: 7.2.0(react-dom@18.2.0)(react@18.2.0)
+  react-pdf-to-image:
+    specifier: ^1.0.2
+    version: 1.0.2(react@18.2.0)
   react-redux:
     specifier: ^8.0.5
     version: 8.1.1(react-dom@18.2.0)(react@18.2.0)
@@ -2928,6 +2931,11 @@ packages:
       domelementtype: 2.3.0
     dev: true
 
+  /dommatrix@1.0.3:
+    resolution: {integrity: sha512-l32Xp/TLgWb8ReqbVJAFIvXmY7go4nTxxlWiAFyhoQw9RKEOHBZNnyGvJWqDVSPmq3Y9HlM4npqF/T6VMOXhww==}
+    deprecated: dommatrix is no longer maintained. Please use @thednp/dommatrix.
+    dev: false
+
   /domutils@2.8.0:
     resolution: {integrity: sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==}
     dependencies:
@@ -4746,6 +4754,18 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /pdfjs-dist@2.16.105:
+    resolution: {integrity: sha512-J4dn41spsAwUxCpEoVf6GVoz908IAA3mYiLmNxg8J9kfRXc2jxpbUepcP0ocp0alVNLFthTAM8DZ1RaHh8sU0A==}
+    peerDependencies:
+      worker-loader: ^3.0.8
+    peerDependenciesMeta:
+      worker-loader:
+        optional: true
+    dependencies:
+      dommatrix: 1.0.3
+      web-streams-polyfill: 3.2.1
+    dev: false
+
   /pdfjs-dist@3.6.172:
     resolution: {integrity: sha512-bfOhCg+S9DXh/ImWhWYTOiq3aVMFSCvzGiBzsIJtdMC71kVWDBw7UXr32xh0y56qc5wMVylIeqV3hBaRsu+e+w==}
     engines: {node: '>=16'}
@@ -4948,6 +4968,17 @@ packages:
 
   /react-is@18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+    dev: false
+
+  /react-pdf-to-image@1.0.2(react@18.2.0):
+    resolution: {integrity: sha512-7fve8zYb2Lcp6FBVKxpXQf0XP6WigS5vEjyrtvZBiJySk+vN02nPrnAiV+rPvPbesxtOoj3zYwO+4bIAZ9XKDA==}
+    peerDependencies:
+      react: ^16.6.3
+    dependencies:
+      pdfjs-dist: 2.16.105
+      react: 18.2.0
+    transitivePeerDependencies:
+      - worker-loader
     dev: false
 
   /react-pdf@7.2.0(react-dom@18.2.0)(react@18.2.0):

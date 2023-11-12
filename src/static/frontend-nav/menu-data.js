@@ -57,6 +57,12 @@ const data = {
         describe: '来源于油猴插件',
       },
       {
+        logo: require('./imgs/common-tools/chatGPT-logo.png'),
+        href: 'https://chat18.aichatos.xyz/#/chat/1699785225839',
+        title: 'GPT-3',
+        describe: '不是很稳定，上下文不是特别连贯，交互设计还好',
+      },
+      {
         logo: 'z',
         href: 'https://ping.chinaz.com/',
         title: '在线ping',
@@ -207,13 +213,13 @@ const data = {
       },
       {
         logo: 'ng-zorro-antd',
-        href: 'http://ng.ant.design/version/7.5.x/docs/introduce/zh',
+        href: 'https://ng.ant.design/docs/introduce/zh',
         title: 'angular组件库',
         describe: 'Ant Design 的 Angular 实现，开发和服务于企业级后台产品',
       },
       {
         logo: 'https://ng-alain.com/assets/img/logo-color.svg',
-        href: 'https://ng-alain.com/components/loading/zh',
+        href: 'https://ng-alain.com/components/sv/zh',
         title: '基于ng-zorro-antd组件库的二次封装',
         describe: '中台组件库',
       },
