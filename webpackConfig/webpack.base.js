@@ -73,7 +73,10 @@ module.exports = {
     alias: {
       '@': pathResolve('../src'),
       '@public': pathResolve('../public'),
-      '@pc-components': pathResolve('../src/platform/pc/components')
+      '@pc': pathResolve('../src/platform/pc'),
+      '@mobile': pathResolve('../src/platform/mobile'),
+      '@pc-components': pathResolve('../src/platform/pc/components'),
+      '@mobile-components': pathResolve('../src/platform/mobile/components')
     }
   }
 }

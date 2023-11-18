@@ -2,40 +2,32 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import MouseOverPopover from '../../components/MouseOverPopover'
 import styles from './index.module.less'
+import routerMeta from '../../router'
 
 function openLogin() {
     alert('等待完善')
 }
 export default function Header() {
     const navigate = useNavigate()
-    // const list = ['前端导航', 'chatGPT', 'ebook']
-    const list = ['前端导航', '电子书']
-    const [curList, setCurList] = useState(list[0])
+    const navList = routerMeta.routes[0].children.filter(i => i.cname !== '博客')
+    const [curList, setCurList] = useState(navList[0])
     function menuClick(item) {
         setCurList(item)
-        if (item === '前端导航') {
-            navigate('/')
-        }
-        if (item === 'chatGPT') {
-            navigate('/chatGPT')
-        }
-        if (item === '电子书') {
-            navigate('/ebook')
-        }
+        navigate(item.path)
     }
     function viaClick() {
-        setCurList('')
+        setCurList(null)
     }
     return (
         <div className={styles.header}>
             <section className={styles.left}>
-                {list.map((item) => (
+                {navList.map((item) => (
                     <h1
-                        className={item === curList ? styles.active : ''}
-                        key={item}
+                        className={item.path === curList.path ? styles.active : ''}
+                        key={item.path}
                         onClick={() => menuClick(item)}
                     >
-                        {item}
+                        {item.cname}
                     </h1>
                 ))}
             </section>
