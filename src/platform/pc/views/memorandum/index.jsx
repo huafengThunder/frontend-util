@@ -46,9 +46,9 @@ const FolderList = React.memo((props) => {
     const handleDeleteClick = async (item) => {
         await delItem(item.id)
         setCurItem([])
-        const list = await getList('') || []
-        setList(list)
+        setList(await getList('') || [])
     }
+    console.log(list)
     return (
         <Box sx={{ width: '300px', bgcolor: 'background.paper' }}>
             <List sx={{ padding: 0 }}>
