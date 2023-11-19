@@ -52,7 +52,7 @@ const FolderList = React.memo((props) => {
     return (
         <Box sx={{ width: '300px', bgcolor: 'background.paper' }}>
             <List sx={{ padding: 0 }}>
-                {list.map(item => (
+                {list?.map(item => (
                     <ListItem disablePadding
                         key={item.id}
                         onClick={() => handleClick(item)}
