@@ -29,7 +29,7 @@ export default function Memorandum() {
     return (
         <div className={styles.memorandum}>
             <section className={styles.title}>
-                <FolderList list={list || []} setCurItem={setCurItem} setList={setList} />
+                <FolderList list={list} setCurItem={setCurItem} setList={setList} />
             </section>
             <section className={styles.content}>
                 {list.length > 0 && <Content item={curItem} noEdit={noEdit} setNoEdit={setNoEdit} setList={setList} />}
@@ -46,7 +46,7 @@ const FolderList = React.memo((props) => {
     const handleDeleteClick = async (item) => {
         await delItem(item.id)
         setCurItem([])
-        const list = await getList('')
+        const list = await getList('') || []
         setList(list)
     }
     return (
