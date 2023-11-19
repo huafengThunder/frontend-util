@@ -54,6 +54,7 @@ const FolderList = React.memo((props) => {
             <List sx={{ padding: 0 }}>
                 {list.map(item => (
                     <ListItem disablePadding
+                        key={item.id}
                         onClick={() => handleClick(item)}
                         secondaryAction={
                             <IconButton edge="end" aria-label="delete" onClick={() => handleDeleteClick(item)}>
