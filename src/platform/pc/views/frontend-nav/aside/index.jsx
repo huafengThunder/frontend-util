@@ -35,8 +35,8 @@ function Sider() {
         <h1
           className={
             value?.eventName === activeMenu ||
-            (Array.isArray(value) &&
-              value.some((item) => item.eventName === activeMenu))
+              (Array.isArray(value) &&
+                value.some((item) => item.eventName === activeMenu))
               ? styles.active
               : ''
           }
@@ -70,7 +70,7 @@ function Sider() {
   }
   return (
     <aside className={styles.aside}>
-      <ul>{Li}</ul>
+      <ul className={styles.navUl}>{Li}</ul>
     </aside>
   )
 }

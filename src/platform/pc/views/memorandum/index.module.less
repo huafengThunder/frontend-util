@@ -1,0 +1,32 @@
+.memorandum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    height: calc(100vh - 60px);
+    border-right: 1px solid #ccc;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: calc(100vh - 60px);
+
+    .form {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        height: calc(100vh - 60px);
+    }
+}
+
+.footer {
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
