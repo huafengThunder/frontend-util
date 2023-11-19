@@ -14,14 +14,17 @@ export default createBrowserRouter([
     children: [
       {
         path: "/",
+        cname:'前端导航',
         element: <FrontendNav />,
       },
       {
         path: "blog",
+        cname:'博客',
         element: <Blog />
       },
       {
         path: "ebook",
+        cname:'电子书',
         element: <Ebook />
       },
     ],
