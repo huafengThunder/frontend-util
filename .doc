@@ -1,8 +1,5 @@
 - babel-loader@9对于node的版本有要求的(babel-loader9.x	webpack5.x	npm^7.12.0	>= node14.15.0)
-- 目前部署方案(手动部署)
-  - git pull
-  - npm run install
-  - npm run build
+- 本地打包，通过上传dist目录实现前端更新
 - task
   - 抽取移动端、pc公共代码 
   - 建立后台模块
