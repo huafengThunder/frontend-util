@@ -549,6 +549,12 @@ const data = {
         title: 'nestjs',
         describe: '类似spring的服务端框架',
       },
+      {
+        logo: require('./imgs/backend/nest-logo.png'),
+        href: 'https://nestjs.bootcss.com/',
+        title: 'nestjs中文网',
+        describe: '类似spring的服务端框架',
+      },
       // {
       //   logo: require('./imgs/backend/express-logo.png'),
       //   href: 'https://koajs.com/',
