@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -78,13 +78,18 @@ function Content(prop) {
     const [title, setTitle] = useState('');
     const [id, setId] = useState('');
     const [content, setContent] = useState('');
+    const autoHeightTextField = useRef()
     useEffect(() => {
         setId(item.id || '');
         setTitle(item.title || '');
         setContent(item.content || '');
-        const el = document.querySelector('#autoHeightTextField')
-        el.style.height = 'calc(100vh - 209px)'
     }, [item]);
+
+    useLayoutEffect(() => {
+        // seLayoutEffect 在 DOM 更新后立即执行，而 setTimeout 设置了一个延迟，在下一次绘制之前执行.
+        // 将下面代码放入 setTimeout 中，你可以确保在 DOM 更新后再执行样式修改，从而避免了可能的闪烁或不正确的布局。??
+        autoHeightTextField.current.children[1].children[0].style.height = 'calc(100vh - 209px)'
+    })
     const handleSubmit = async () => {
         setNoEdit(!noEdit)
         if (noEdit === false) {
@@ -120,14 +125,14 @@ function Content(prop) {
                 }}
             />
             <TextField
-                id="autoHeightTextField"
+                ref={autoHeightTextField}
                 label="内容："
                 variant="filled"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
                 fullWidth
                 multiline
-                rows={30}
+                rows={10}
                 InputProps={{
                     readOnly: noEdit,
                 }}

@@ -213,7 +213,7 @@ const data = {
       },
       {
         logo: 'ng-zorro-antd',
-        href: 'https://ng.ant.design/docs/introduce/zh',
+        href: 'https://ng.ant.design/components/overview/zh',
         title: 'angular组件库',
         describe: 'Ant Design 的 Angular 实现，开发和服务于企业级后台产品',
       },
