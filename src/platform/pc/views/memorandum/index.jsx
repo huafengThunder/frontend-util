@@ -10,6 +10,8 @@ import InboxIcon from '@mui/icons-material/Inbox';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
+import { useSnackbar } from 'notistack';
 import styles from './index.module.less'
 import { getList, updateItem, addItem, delItem } from '@/api/memorandum'
 
@@ -79,6 +81,9 @@ function Content(prop) {
     const [id, setId] = useState('');
     const [content, setContent] = useState('');
     const autoHeightTextField = useRef()
+    const [saveLoading, setSaveLoading] = useState(false);
+    const [addLoading, setAddLoading] = useState(false);
+    const { enqueueSnackbar } = useSnackbar();
     useEffect(() => {
         setId(item.id || '');
         setTitle(item.title || '');
@@ -91,20 +96,26 @@ function Content(prop) {
         autoHeightTextField.current.children[1].children[0].style.height = 'calc(100vh - 209px)'
     })
     const handleSubmit = async () => {
-        setNoEdit(!noEdit)
         if (noEdit === false) {
             if (id) {
                 // 修改
+                setSaveLoading(true)
                 await updateItem(item.id, { title, content })
                 const list = await getList('')
                 setList(list)
+                enqueueSnackbar('更新成功', { variant: 'success', autoHideDuration: 2000 });
+                setSaveLoading(false)
             } else {
                 // 新增
+                setAddLoading(true)
                 await addItem({ title, content })
+                enqueueSnackbar('新增成功', { variant: 'success', autoHideDuration: 2000 });
                 const list = await getList('')
                 setList(list)
+                setAddLoading(false)
             }
         }
+        setNoEdit(!noEdit)
     };
     const handleAdd = () => {
         setId('')
@@ -138,8 +149,25 @@ function Content(prop) {
                 }}
             />
             <footer className={styles.footer}>
-                <Button size="medium" variant="outlined" onClick={() => { handleAdd(noEdit) }}>新增</Button>
-                <Button variant="contained" size="medium" onClick={() => handleSubmit(noEdit)}>{noEdit ? '编辑' : '保存'}</Button>
+                <Button size="medium" variant="outlined" onClick={() => { handleAdd(noEdit) }}>
+                    {addLoading && <CircularProgress
+                        size={12}
+                        color="inherit"
+                        style={{ marginRight: '10px' }}
+                    />}新增</Button>
+                <Button
+                    variant="contained"
+                    size="medium"
+                    disabled={saveLoading}
+                    onClick={handleSubmit}
+                >
+                    {saveLoading && <CircularProgress
+                        size={12}
+                        color="inherit"
+                        style={{ marginRight: '10px' }}
+                    />}
+                    {noEdit ? '编辑' : '保存'}
+                </Button>
             </ footer>
         </form>
     );

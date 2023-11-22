@@ -20,6 +20,7 @@
     "classnames": "^2.3.2",
     "github-markdown-css": "^5.1.0",
     "marked": "^4.2.4",
+    "notistack": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-pdf": "^7.2.0",
