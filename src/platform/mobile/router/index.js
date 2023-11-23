@@ -5,6 +5,7 @@ import Layout from '../layout'
 import FrontendNav from '../views/frontend-nav'
 import Blog from '../views/blog'
 import Memorandum from '../views/memorandum'
+import MemorandumDetail from '../views/memorandum/memorandum-detail.jsx'
 import Ebook from '../views/ebook'
 
 export default createBrowserRouter([
@@ -21,12 +22,19 @@ export default createBrowserRouter([
       {
         path: "blog",
         cname: '博客',
+        activeMenu: false,
         element: <Blog />
       },
       {
         path: "memorandum",
         cname: '备忘录',
         element: <Memorandum />
+      },
+      {
+        path: "memorandum-detail",
+        cname: '备忘录-详情',
+        activeMenu: false,
+        element: <MemorandumDetail />
       },
       {
         path: "ebook",

@@ -6,7 +6,7 @@ import styles from './index.module.less'
 
 function Layout() {
   const navigate = useNavigate()
-  const navList = routerMeta.routes[0].children.filter(i => i.cname !== '博客')
+  const navList = routerMeta.routes[0].children.filter(i => i.activeMenu !== false)
   const [curList, setCurList] = useState(navList[0])
   function menuClick(item) {
     setCurList(item)

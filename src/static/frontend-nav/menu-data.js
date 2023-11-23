@@ -489,6 +489,35 @@ const data = {
       }
     ]
   },
+  Repository: {
+    title: '代码管理平台',
+    card: [
+      {
+        logo: require('./imgs/repository/github-logo.png'),
+        href: 'https://github.com/',
+        title: 'github',
+        describe: '全球最大开源仓库',
+      },
+      {
+        logo: require('./imgs/repository/github-logo.png'),
+        href: 'https://githubfast.com/',
+        title: 'github国内镜像',
+        describe: 'github国内镜像网站',
+      },
+      {
+        logo: require('./imgs/repository/gitee-logo.png'),
+        href: 'https://gitee.com/',
+        title: 'gitee',
+        describe: '国内开源仓库',
+      },
+      {
+        logo: 'git教程',
+        href: 'https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000',
+        title: 'git基本教程',
+        describe: '廖雪峰的博客--git教程',
+      },
+    ],
+  },
   MicroFrontend: {
     title: '微前端',
     card: [
@@ -655,29 +684,6 @@ const data = {
         describe: 'linux常用指令',
       },
     ]
-  },
-  Repository: {
-    title: '仓库',
-    card: [
-      {
-        logo: require('./imgs/repository/github-logo.png'),
-        href: 'https://github.com/',
-        title: 'github',
-        describe: '全球最大开源仓库',
-      },
-      {
-        logo: require('./imgs/repository/gitee-logo.png'),
-        href: 'https://gitee.com/',
-        title: 'gitee',
-        describe: '国内开源仓库',
-      },
-      {
-        logo: 'git教程',
-        href: 'https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000',
-        title: 'git基本教程',
-        describe: '廖雪峰的博客--git教程',
-      },
-    ],
   },
   UI: {
     title: 'UI',

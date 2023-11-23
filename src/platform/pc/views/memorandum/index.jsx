@@ -80,7 +80,6 @@ function Content(prop) {
     const [title, setTitle] = useState('');
     const [id, setId] = useState('');
     const [content, setContent] = useState('');
-    const autoHeightTextField = useRef()
     const [saveLoading, setSaveLoading] = useState(false);
     const [addLoading, setAddLoading] = useState(false);
     const { enqueueSnackbar } = useSnackbar();
@@ -90,6 +89,8 @@ function Content(prop) {
         setContent(item.content || '');
     }, [item]);
 
+    // 设置高度
+    const autoHeightTextField = useRef()
     useLayoutEffect(() => {
         // seLayoutEffect 在 DOM 更新后立即执行，而 setTimeout 设置了一个延迟，在下一次绘制之前执行.
         // 将下面代码放入 setTimeout 中，你可以确保在 DOM 更新后再执行样式修改，从而避免了可能的闪烁或不正确的布局。??
