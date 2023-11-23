@@ -27,7 +27,7 @@ export default function Memorandum() {
     const handleTouchEnd = async (event, item) => {
         const endX = event.changedTouches[0].clientX;
         const distance = endX - startXRef.current;
-        if (distance < -50) {
+        if (distance < -80) {
             // console.log('左划事件', item)
             await delItem(item.id)
             setList(await getList('') || [])
