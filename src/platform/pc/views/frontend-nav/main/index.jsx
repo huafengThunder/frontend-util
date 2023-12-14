@@ -1,20 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styles from './index.module.less'
-import EventBus from '@/utils/event-bus'
 import Card from '../../../components/card'
-import Data from '@/static/frontend-nav/menu-data'
-function Main() {
-  const [curMenu, setCurMenu] = useState('CommonTools')
-  const data = Data
-  useEffect(() => {
-    EventBus.addListener('nemuClick', async (msgType) => {
-      setCurMenu(msgType)
-    })
-  }, [])
-
+function Main(props) {
   return (
     <section className={styles.main}>
-      {<Card data={data.get(curMenu)} />}
+      {<Card list={props.originData} />}
     </section>
   )
 }

@@ -1,76 +1,41 @@
-import React, { Fragment, useState } from 'react'
+import React from 'react'
 import styles from './index.module.less'
-import Data from '@/static/frontend-nav/menu-data'
-import EventBus from '@/utils/event-bus'
 
-function reveresFlat(data) {
-  const menu = new Map()
-  const menuArr = []
-  data.forEach((element, key) => {
-    if (element.menu) {
-      menuArr.push({
-        title: element.title,
-        card: element.card,
-        eventName: key,
-      })
-      menu.set(element.menu, menuArr)
-    } else {
-      menu.set(element.title, {
-        title: element.title,
-        card: element.card,
-        eventName: key,
-      })
-    }
-  })
-  return menu
+// 转化数据，先固定按两级菜单组成树结构
+function generatorMenu(res) {
+  const pids = [...new Set(res.map(i => i.pid))].reverse()
+  const menus = pids.map(i => ({
+    pid: i, children: res.reduce((acc, cur) => {
+      if (i === cur.pid && !acc.includes(cur.type)) {
+        acc.push(cur.type)
+        return acc
+      } else {
+        return acc
+      }
+    }, [])
+  }))
+  return menus
 }
 
-function Sider() {
-  const [activeMenu, setActiveMenu] = useState('CommonTools')
-  const arr = reveresFlat(Data)
-  const Li = []
-  arr.forEach((value, key) => {
-    Li.push(
-      <li key={key}>
-        <h1
-          className={
-            value?.eventName === activeMenu ||
-            (Array.isArray(value) &&
-              value.some((item) => item.eventName === activeMenu))
-              ? styles.active
-              : ''
-          }
-          onClick={(e) => nemuClick(e, value.eventName || value[0].eventName)}
-        >
-          {key}
-        </h1>
-        {Array.isArray(value) ? (
-          <ul>
-            {value.map((item) => (
-              <li
-                key={item.title}
-                className={item.eventName === activeMenu ? styles.active : ''}
-                onClick={(e) => nemuClick(e, item.eventName)}
-              >
-                <p>
-                  {item.title}
-                </p>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <Fragment />
-        )}
-      </li>
-    )
-  })
-  function nemuClick(e, name) {
-    EventBus.emit('nemuClick', name)
-    setActiveMenu(name)
+function Sider(props) {
+  const { originData, curMenu, setCurMenu } = props
+  function menuClick(name) {
+    setCurMenu(name)
   }
   return (
     <aside className={styles.aside}>
-      <ul>{Li}</ul>
+      <ul className={styles.navUl}>
+        {generatorMenu(originData).map((item, index) => (
+          <li key={index}>
+            {item.pid ? <h1 onClick={() => menuClick(item.children[0])}>{item.pid}</h1> : null}
+            <ul>
+              {item.children.map((child, childIndex) => (
+                <li key={childIndex} className={curMenu === child ? styles.active : ''} onClick={() => menuClick(child)}>{child}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
     </aside>
   )
 }
