@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin') // 打包html
+const { EsbuildPlugin } = require('esbuild-loader')
 const path = require('path')
 const pathResolve = _path => path.resolve(__dirname, _path) // 解析成绝对路径
 module.exports = {
@@ -10,15 +11,25 @@ module.exports = {
   },
   module: {
     rules: [
+      // babel-loader含有transform，能做ast分析，但是esbuild-loader不行。
+      // {
+      //   test: /\.j(s|sx)$/,
+      //   exclude: /(node_modules|bower_components)/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: ['@babel/preset-env', '@babel/preset-react'],
+      //       plugins: ['@babel/plugin-transform-runtime']
+      //     }
+      //   }
+      // },
+      // esbuild-loader最低版本需要es6
       {
         test: /\.j(s|sx)$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: ['@babel/plugin-transform-runtime']
-          }
+        loader: 'esbuild-loader',
+        options: {
+          loader: 'jsx',  
+          target: 'es2015'
         }
       },
       {
@@ -68,6 +79,15 @@ module.exports = {
       favicon: pathResolve('../public/imgs/logo.awebp') // 在此处设置
     })
   ],
+  optimization: {
+    minimizer: [
+      new EsbuildPlugin({
+        target: 'es2015',
+        // 开启css压缩，当这里开启的时候，就不需要css-minimizer-webpack-plugin这样的css压缩插件
+        css: true, 
+      })
+    ]
+  },
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
