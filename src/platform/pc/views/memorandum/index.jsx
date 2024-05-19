@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -89,13 +89,6 @@ function Content(prop) {
         setContent(item.content || '');
     }, [item]);
 
-    // 设置高度
-    const autoHeightTextField = useRef()
-    useLayoutEffect(() => {
-        // seLayoutEffect 在 DOM 更新后立即执行，而 setTimeout 设置了一个延迟，在下一次绘制之前执行.
-        // 将下面代码放入 setTimeout 中，你可以确保在 DOM 更新后再执行样式修改，从而避免了可能的闪烁或不正确的布局。??
-        autoHeightTextField.current.children[1].children[0].style.height = 'calc(100vh - 209px)'
-    })
     const handleSubmit = async () => {
         if (noEdit === false) {
             if (id) {
@@ -136,19 +129,44 @@ function Content(prop) {
                     readOnly: noEdit,
                 }}
             />
-            <TextField
-                ref={autoHeightTextField}
-                label="内容："
-                variant="filled"
-                value={content}
-                onChange={(e) => setContent(e.target.value)}
-                fullWidth
-                multiline
-                rows={10}
-                InputProps={{
-                    readOnly: noEdit,
-                }}
-            />
+            <div style={{
+                flex: 1, display: 'flex',
+                display: 'flex',
+                flexFlow: 'column',
+                backgroundColor: 'rgb(240, 240, 240)',
+            }}>
+                <label style={{
+                    color: 'rgba(0, 0, 0, 0.6)',
+                    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+                    fontWeight: 400,
+                    fontSize: '0.8rem',
+                    lineHeight: '1.4375em',
+                    letterSpacing: '0.00938em',
+                    padding: '12px 12px 8px',
+                    display: 'block',
+                    transformOrigin: 'top left',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    maxWidth: 'calc(133% - 24px)',
+                }}>内容：</label>
+                <textarea
+                    readOnly={noEdit}
+                    value={content}
+                    onChange={(e) => setContent(e.target.value)}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        padding: '0 12px 8px 12px',
+                        fontSize: '1rem',
+                        color: 'rgba(0, 0, 0, 0.87)',
+                        border: 'none',
+                        outline: 'none',
+                        resize: 'none',
+                        backgroundColor: 'rgb(240, 240, 240)',
+                        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+                    }} />
+            </div>
             <footer className={styles.footer}>
                 <Button size="medium" variant="outlined" onClick={() => { handleAdd(noEdit) }}>
                     {addLoading && <CircularProgress
@@ -170,6 +188,6 @@ function Content(prop) {
                     {noEdit ? '编辑' : '保存'}
                 </Button>
             </ footer>
-        </form>
+        </form >
     );
 }
