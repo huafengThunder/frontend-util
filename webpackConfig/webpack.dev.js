@@ -2,7 +2,6 @@ const path = require('path')
 const { merge } = require('webpack-merge')
 const baseConfig = require('./webpack.base')
 const pathResolve = _path => path.resolve(__dirname, _path) // 解析成绝对路径
-// const ip = 'http://huafeng.site:3001' // 线上ip
 const ip = 'http://8.222.180.7:3001' // 线上ip
 // const ip = 'http://localhost:3001' // 本地ip
 config = {
