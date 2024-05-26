@@ -3,10 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import MouseOverPopover from '../../components/MouseOverPopover'
 import styles from './index.module.less'
 import routerMeta from '../../router'
+import LoginDialog from './components/LoginModal';
 
-function openLogin() {
-    alert('等待完善')
-}
 export default function Header() {
     const navigate = useNavigate()
     const navList = routerMeta.routes[0].children.filter(i => i.cname !== '博客')
@@ -16,12 +14,16 @@ export default function Header() {
         navigate(item.path)
     }
     function viaClick() {
-        setCurList(null)
+        // console.log('navList', navList);
+        // setCurList(null)
     }
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
     return (
         <div className={styles.header}>
             <section className={styles.left}>
-                {navList.map((item) => (
+                {navList.length && navList.map((item) => (
                     <h1
                         className={item.path === curList.path ? styles.active : ''}
                         key={item.path}
@@ -35,7 +37,6 @@ export default function Header() {
                 <MouseOverPopover>
                     <div className={styles.via} onClick={() => viaClick()}></div>
                 </MouseOverPopover >
-                <button onClick={() => openLogin()}>登录</button>
             </section>
         </div>
     )
