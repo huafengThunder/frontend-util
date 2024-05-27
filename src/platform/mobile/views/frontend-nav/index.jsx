@@ -5,7 +5,7 @@ import styles from './index.module.less'
 import { getMenus } from '@/api/menu'
 
 function Layout() {
-  const [curMenu, setCurMenu] = useState('常用工具')
+  const [curMenu, setCurMenu] = useState('AI工具')
   const [originData, setOriginData] = useState([])
   useEffect(() => {
     async function setMenusDate() {
