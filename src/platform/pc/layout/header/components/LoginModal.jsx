@@ -4,7 +4,7 @@ import { Button, TextField, Dialog, DialogTitle, DialogContent, Snackbar } from 
 import { loginApi } from '@/api/login.js';
 import { isSuccess } from '@/utils/judge-http-code';
 
-const LoginDialog = ({ type, title, open, handleClose }) => {
+const LoginDialog = ({ type, title, open, handleClose, closeMouseOverPopover }) => {
     const navigate = useNavigate()
     const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
@@ -24,10 +24,10 @@ const LoginDialog = ({ type, title, open, handleClose }) => {
             if (isSuccess(res)) {
                 // 登录成功
                 setSnackbarMessage('登录成功');
-                setSnackbarOpen(true);
-                // 使用replace刷新当前页面
-                navigate('.');
+                // 刷新当前页面
+                navigate(0);
                 handleClose(false)
+                closeMouseOverPopover()
             } else {
                 // 登录失败
                 setSnackbarMessage('登录失败: ' + res.message);

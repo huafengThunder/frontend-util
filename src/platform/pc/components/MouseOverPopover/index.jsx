@@ -10,15 +10,19 @@ import LoginDialog from '../../layout/header/components/LoginModal';
 
 export default function MouseOverPopover(props) {
   const { enqueueSnackbar } = useSnackbar();
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   const [anchorEl, setAnchorEl] = React.useState(null)
-  const [isLogged, setIsLogged] = useState(false)
+  const [isLogged, setIsLogged] = useState(null)
+
+  useEffect(() => {
+    navigate(location.pathname);
+  }, [location, navigate]);
 
   const handleClick = async (event) => {
     try {
       const res = await isLoggedIn();
       if (isSuccess(res)) {
-        setIsLogged(true)
+        setIsLogged(res.data)
       }
     } catch (error) {
     } finally {
@@ -35,6 +39,9 @@ export default function MouseOverPopover(props) {
       const res = await logout();
       if (isSuccess(res)) {
         enqueueSnackbar('退出成功', { variant: 'success' });
+        handleClose()
+        // 刷新当前页面
+        navigate(0);
       }
     } catch (error) {
       if (noLogin(error)) {
@@ -53,6 +60,7 @@ export default function MouseOverPopover(props) {
   const open = Boolean(anchorEl)
   const id = open ? 'simple-popover' : undefined
 
+  // 菜单弹窗
   const [openEditMenu, setOpenEditMenu] = useState(false);
   const [menuData, setMenuData] = useState(null);
 
@@ -90,11 +98,16 @@ export default function MouseOverPopover(props) {
             </Typography>
           </>
         )}
-        {isLogged && (
+        {
+          isLogged?.name === 'root' &&
           <>
             <Typography sx={{ p: 1 }} style={{ cursor: 'pointer' }} onClick={() => { setOpenEditMenu(true); handleClose() }}>
               菜单
             </Typography>
+          </>
+        }
+        {isLogged && (
+          <>
             <Typography sx={{ p: 1 }} style={{ cursor: 'pointer' }} onClick={() => logoutClick()} >
               登出
             </Typography>
@@ -109,6 +122,7 @@ export default function MouseOverPopover(props) {
       />
       <LoginDialog
         open={loginOpen}
+        closeMouseOverPopover={handleClose}
         handleClose={loginCloseClick}
         title="Login"
       />
