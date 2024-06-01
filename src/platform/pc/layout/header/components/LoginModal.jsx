@@ -3,10 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { Button, TextField, Dialog, DialogTitle, DialogContent, Snackbar } from '@mui/material';
 import { loginApi } from '@/api/login.js';
 import { isSuccess } from '@/utils/judge-http-code';
+import { sessionStorageTool } from '@/utils/storage';
 
 const LoginDialog = ({ type, title, open, handleClose, closeMouseOverPopover }) => {
     const navigate = useNavigate()
-    const [snackbarOpen, setSnackbarOpen] = useState(false);
+    const [snackbarOpen, setSnackbarOpen] = useState(sessionStorageTool.get('user') ?? false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
     const handleSnackbarClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -24,6 +25,7 @@ const LoginDialog = ({ type, title, open, handleClose, closeMouseOverPopover }) 
             if (isSuccess(res)) {
                 // 登录成功
                 setSnackbarMessage('登录成功');
+                sessionStorageTool.set('user', res.data)
                 // 刷新当前页面
                 navigate(0);
                 handleClose(false)

@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import MouseOverPopover from '../../components/MouseOverPopover'
 import styles from './index.module.less'
 import routerMeta from '../../router'
-import LoginDialog from './components/LoginModal';
 
 export default function Header() {
     const navigate = useNavigate()

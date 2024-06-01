@@ -12,7 +12,7 @@ export default function MouseOverPopover(props) {
   const { enqueueSnackbar } = useSnackbar();
   const navigate = useNavigate()
   const [anchorEl, setAnchorEl] = React.useState(null)
-  const [isLogged, setIsLogged] = useState(null)
+  const [isLogged, setIsLogged] = useState(false)
 
   useEffect(() => {
     navigate(location.pathname);
@@ -46,9 +46,12 @@ export default function MouseOverPopover(props) {
     } catch (error) {
       if (noLogin(error)) {
         enqueueSnackbar('未登录，无需退出', { variant: 'error' });
+        navigate(0);
       } else {
         enqueueSnackbar('Error: Forbidden', { variant: 'error' });
       }
+    } finally {
+      sessionStorageTool.remove('user');
     }
   }
   // 登录弹窗
