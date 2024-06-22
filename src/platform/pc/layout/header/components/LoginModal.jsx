@@ -7,7 +7,7 @@ import { sessionStorageTool } from '@/utils/storage';
 
 const LoginDialog = ({ type, title, open, handleClose, closeMouseOverPopover }) => {
     const navigate = useNavigate()
-    const [snackbarOpen, setSnackbarOpen] = useState(sessionStorageTool.get('user') ?? false);
+    const [snackbarOpen, setSnackbarOpen] = useState(sessionStorageTool.get('user') ? true: false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
     const handleSnackbarClose = (event, reason) => {
         if (reason === 'clickaway') {
