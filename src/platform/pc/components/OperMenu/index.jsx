@@ -31,7 +31,7 @@ export const EditMenuDialog = ({ open, handleClose, menuData, setMenuData }) => 
             <DialogTitle>{menuData ? '编辑菜单' : '新增菜单'}</DialogTitle>
             <DialogContent>
                 <TextField name="pid" label="目录(pid)" value={formData.pid} onChange={handleInputChange} fullWidth margin="normal" />
-                <TextField name="type" label="类型" value={formData.type} onChange={handleInputChange} fullWidth margin="normal" />
+                <TextField name="type" label="菜单(类型)" value={formData.type} onChange={handleInputChange} fullWidth margin="normal" />
                 <TextField name="logo" label="Logo" value={formData.logo} onChange={handleInputChange} fullWidth margin="normal" />
                 <TextField name="href" label="链接" value={formData.href} onChange={handleInputChange} fullWidth margin="normal" />
                 <TextField name="title" label="标题" value={formData.title} onChange={handleInputChange} fullWidth margin="normal" />
