@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 export const EditMenuDialog = ({ open, handleClose, menuData, setMenuData }) => {
     const [formData, setFormData] = useState(menuData || {
+        pid: null,
         type: '',
         logo: '',
         href: '',
@@ -29,6 +30,7 @@ export const EditMenuDialog = ({ open, handleClose, menuData, setMenuData }) => 
         <Dialog open={open} onClose={handleClose}>
             <DialogTitle>{menuData ? '编辑菜单' : '新增菜单'}</DialogTitle>
             <DialogContent>
+                <TextField name="pid" label="目录(pid)" value={formData.pid} onChange={handleInputChange} fullWidth margin="normal" />
                 <TextField name="type" label="类型" value={formData.type} onChange={handleInputChange} fullWidth margin="normal" />
                 <TextField name="logo" label="Logo" value={formData.logo} onChange={handleInputChange} fullWidth margin="normal" />
                 <TextField name="href" label="链接" value={formData.href} onChange={handleInputChange} fullWidth margin="normal" />
