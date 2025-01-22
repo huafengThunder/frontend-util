@@ -5,8 +5,9 @@ import styles from './index.module.less'
 function generatorMenu(res) {
   const pids = [...new Set(res.map(i => i.pid))].reverse()
   const menus = pids.map(i => ({
-    pid: i, children: res.reduce((acc, cur) => {
-      if (i === cur.pid && !acc.includes(cur.type)) {
+    pid: i || null,
+    children: res.reduce((acc, cur) => {
+      if (i === (cur.pid || null) && !acc.includes(cur.type)) {
         acc.push(cur.type)
         return acc
       } else {
