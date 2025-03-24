@@ -24,14 +24,15 @@ export default function MemorandumDetail() {
     }
 
     // 设置高度
-    const autoHeightTextField = useRef()
+    const autoHeightTextField = useRef(null)
     useLayoutEffect(() => {
-        // seLayoutEffect 在 DOM 更新后立即执行，而 setTimeout 设置了一个延迟，在下一次绘制之前执行.
-        // 将下面代码放入 setTimeout 中，你可以确保在 DOM 更新后再执行样式修改，从而避免了可能的闪烁或不正确的布局。??
-        setTimeout(() => {
-            autoHeightTextField.current.children[1].children[0].style.height = 'calc(100vh - 148px)'
-        })
-    })
+        if (autoHeightTextField.current) {
+            // 直接设置 textarea 的高度和 box-sizing
+            const textarea = autoHeightTextField.current;
+            textarea.style.height = 'calc(100vh - 148px)';
+            textarea.style.boxSizing = 'border-box';
+        }
+    }, []) // 空依赖数组确保只在挂载时运行一次
     return (
         <section>
             <form onSubmit={() => handleSubmit(item)}>
@@ -50,13 +51,12 @@ export default function MemorandumDetail() {
                     onChange={(e) => setItem({ ...item, content: e.target.value })}
                     fullWidth
                     multiline
-                    rows={10}
                 />
             </form>
             <SpeedDial
                 ariaLabel="保存"
                 sx={{ position: 'absolute', bottom: 16, right: 16 }}
-                icon={<SaveIcon openIcon={<SaveIcon />} />}
+                icon={<SaveIcon />}
                 onClick={() => handleSubmit(item)}
             >
             </SpeedDial>
