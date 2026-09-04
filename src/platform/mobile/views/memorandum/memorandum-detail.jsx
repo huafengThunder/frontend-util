@@ -2,7 +2,9 @@ import React, { useRef, useState, useLayoutEffect } from "react"
 import { useLocation, useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import SaveIcon from "@mui/icons-material/Save";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import SpeedDial from '@mui/material/SpeedDial';
+import Snackbar from '@mui/material/Snackbar';
 import { updateItem, addItem } from '@/api/memorandum'
 
 export default function MemorandumDetail() {
@@ -10,6 +12,16 @@ export default function MemorandumDetail() {
     const navigate = useNavigate()
     const params = location.state;
     const [item, setItem] = useState(params || {})
+    const [copyTip, setCopyTip] = useState('')
+    const handleCopy = async () => {
+        const text = item?.content || ''
+        try {
+            await navigator.clipboard.writeText(text)
+            setCopyTip('复制成功')
+        } catch (err) {
+            setCopyTip('复制失败')
+        }
+    }
     const handleSubmit = async (item) => {
         const { title, content } = item
         if (item?.id) {
@@ -54,12 +66,25 @@ export default function MemorandumDetail() {
                 />
             </form>
             <SpeedDial
+                ariaLabel="全复制"
+                sx={{ position: 'fixed', bottom: 80, right: 16 }}
+                icon={<ContentCopyIcon />}
+                onClick={handleCopy}
+            >
+            </SpeedDial>
+            <SpeedDial
                 ariaLabel="保存"
-                sx={{ position: 'absolute', bottom: 16, right: 16 }}
+                sx={{ position: 'fixed', bottom: 16, right: 16 }}
                 icon={<SaveIcon />}
                 onClick={() => handleSubmit(item)}
             >
             </SpeedDial>
+            <Snackbar
+                open={!!copyTip}
+                autoHideDuration={1500}
+                onClose={() => setCopyTip('')}
+                message={copyTip}
+            />
         </section>
     )
 }

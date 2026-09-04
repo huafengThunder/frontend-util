@@ -5,8 +5,6 @@ import ListItemText from '@mui/material/ListItemText';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import InboxIcon from '@mui/icons-material/Inbox';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Box from '@mui/material/Box';
@@ -56,16 +54,11 @@ const FolderList = React.memo((props) => {
                 {Array.isArray(list) && list.map(item => (
                     <ListItem disablePadding
                         key={item.id}
-                        onClick={() => handleClick(item)}
-                        secondaryAction={
-                            <IconButton edge="end" aria-label="delete" onClick={() => handleDeleteClick(item)}>
+                        onClick={() => handleClick(item)}>
+                        <ListItemButton>
+                            <IconButton edge="start" aria-label="delete" onClick={(e) => { e.stopPropagation(); handleDeleteClick(item); }}>
                                 <DeleteIcon />
                             </IconButton>
-                        }>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <InboxIcon />
-                            </ListItemIcon>
                             <ListItemText primary={item.title} />
                         </ListItemButton>
                     </ListItem>
